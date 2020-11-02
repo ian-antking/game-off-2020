@@ -57,8 +57,8 @@ export default class AlignGrid {
   {
     this.show();
     let count=0;
-    for (let i = 0; i < this.config.rows; i++) {
-      for(let j=0;j<this.config.cols;j++)
+    for (let i = 0; i < this.rows; i++) {
+      for(let j=0;j<this.columns;j++)
       {
         const numText=this.scene.add.text(0,0,count,{color:'#ff0000'});
         numText.setOrigin(0.5,0.5);
