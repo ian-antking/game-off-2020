@@ -9,11 +9,10 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
-    const canvas = document.querySelector('canvas');
-    this.logo = this.add.image((canvas.width / 2), (canvas.height / 2) - 50, 'logo');
+    const { width, height } = this.scale;
+    this.logo = this.add.image((width / 2), (height / 2) - 50, 'logo');
     this.logo.setScale(0.75);
-    const width = this.cameras.main.width;
-    const height = this.cameras.main.height;
+    
     const titleText = this.make.text({
       x: width / 2,
       y: height / 2 + 100,
