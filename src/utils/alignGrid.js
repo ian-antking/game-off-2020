@@ -36,21 +36,21 @@ export default class AlignGrid {
     this.graphics.strokePath();
   }
 
-  placeAt(xx,yy,obj)
+  placeAt(xx,yy,object)
   {
     //calc position based upon the cellwidth and cellheight
     const x2=this.cw*xx+this.cw/2;
     const y2=this.ch*yy+this.ch/2;
 
-    obj.x=x2;
-    obj.y=y2;
+    object.x=x2;
+    object.y=y2;
   }
-  placeAtIndex(index,obj)
+  placeAtIndex(index,object)
   {
     const yy=Math.floor(index/this.columns);
     const xx=index-(yy*this.columns);
 
-    this.placeAt(xx,yy,obj);
+    this.placeAt(xx,yy,object);
 
   }
   showNumbers()
