@@ -31,7 +31,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 100,
       text: 'Loading...',
       style: {
-        font: '20px monospace',
+        font: '20px future-thin',
         fill: '#ffffff',
       },
     });
@@ -42,7 +42,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 50,
       text: '0%',
       style: {
-        font: '18px monospace',
+        font: '18px future-thin',
         fill: '#ffffff',
       },
     });
@@ -53,7 +53,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 + 50,
       text: '',
       style: {
-        font: '18px monospace',
+        font: '18px future-thin',
         fill: '#ffffff',
       },
     });
@@ -80,7 +80,7 @@ export default class PreloaderScene extends Phaser.Scene {
     });
 
     this.timedEvent = this.time.delayedCall(1000, this.ready, [], this);
-    this.load.image('logo', '../../assets/logo.png');
+    this.load.image('logo', 'assets/logo.png');
   }
 
   create() {
