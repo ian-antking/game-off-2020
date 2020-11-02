@@ -9,13 +9,13 @@ export default class AlignGrid {
     this.scene = scene;
     this.rows = rows || 5;
     this.columns = columns || 5;
-    this.height = height || scene.scale.height;
+    this.height = height || this.scene.scale.height;
     this.width = width || this.scene.scale.width;
 
     //cell width
-    this.cw=width/columns;
+    this.cellWidth= this.width / this.columns;
     //cell height
-    this.ch=height/rows;
+    this.cellHeight= this.height / this.rows;
   }
 
   show()
@@ -23,14 +23,14 @@ export default class AlignGrid {
     this.graphics=this.scene.add.graphics();
     this.graphics.lineStyle(2,0xff0000);
 
-    for (let i = 0; i < this.config.width; i+=this.cw) {
-      this.graphics.moveTo(i,0);
-      this.graphics.lineTo(i,this.config.height);
+    for (let column = 0; column < this.width; column += this.cellWidth) {
+      this.graphics.moveTo(column, 0);
+      this.graphics.lineTo(column, this.height);
     }
 
-    for (let i = 0; i < this.config.height; i+=this.ch) {
-      this.graphics.moveTo(0,i);
-      this.graphics.lineTo(this.config.width,i);
+    for (let row = 0; row < this.height; row += this.cellHeight) {
+      this.graphics.moveTo(0, row);
+      this.graphics.lineTo(this.width, row);
     }
 		
     this.graphics.strokePath();
@@ -39,11 +39,11 @@ export default class AlignGrid {
   placeAt(xx,yy,object)
   {
     //calc position based upon the cellwidth and cellheight
-    const x2=this.cw*xx+this.cw/2;
-    const y2=this.ch*yy+this.ch/2;
+    const x2 = this.cellWidth * xx + this.cellWidth / 2;
+    const y2 = this.cellHeight * yy + this.cellHeight / 2;
 
-    object.x=x2;
-    object.y=y2;
+    object.x = x2;
+    object.y = y2;
   }
   placeAtIndex(index,object)
   {
