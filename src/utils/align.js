@@ -6,11 +6,11 @@ export default class Align
   }
 
   static centerH(object, game) {
-    object.x=game.scale.width/2-object.displayWidth/2;
+    object.x= game.scale.width/2;
   }
 	
   static centerV(object, game) {
-    object.y=game.scale.height/2-object.displayHeight/2;
+    object.y=game.scale.height/2;
   }
 
   static center2(object, game) {
