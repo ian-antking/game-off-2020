@@ -20,9 +20,11 @@ export default class GameScene extends Phaser.Scene {
   continueStory() {
     let text;
     let data;
+    let choices;
 
     if (this.story.canContinue) {
       text = this.story.Continue();
+      choices = this.story.currentChoices;
       const tags = this.story.currentTags;
       
       try {
@@ -36,6 +38,11 @@ export default class GameScene extends Phaser.Scene {
       text = 'The End?';
       data = {};
     }
-    this.events.emit('UpdateText', { text, data });
+    this.events.emit('UpdateText', { text, data, choices });
+  }
+
+  handleChoice(choiceIndex) {
+    this.story.ChooseChoiceIndex(choiceIndex);
+    this.continueStory();
   }
 }

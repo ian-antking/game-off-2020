@@ -8,7 +8,7 @@ export default class StoryText extends Phaser.GameObjects.Text {
       font: '12pt future-thin',
       wordWrap:
       {
-        width: scene.scale.width * 0.7,
+        width: scene.scale.width * 0.9,
         useAdvancedWrap: true 
       }
     };
