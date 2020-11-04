@@ -19,6 +19,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'assets', to: 'assets' },
+        { from: 'dialogue', to: 'dialogue' },
         'index.html'
       ]
     }),

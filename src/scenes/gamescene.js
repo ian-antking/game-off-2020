@@ -11,18 +11,19 @@ export default class GameScene extends Phaser.Scene {
 
   create() {
     this.introDialogue = this.cache.json.get('test-intro');
+    this.metaDialogue = this.cache.json.get('meta-test');
 
-    this.introDialogue = new Story(this.introDialogue);
+    this.introDialogue = new Story(this.metaDialogue);
 
     this.textStyle = {
       fill: '#ffffff',
-      font: '16px Arial',
+      font: '12px future-thin',
       align: 'left',
-      wordWrap: true,
-      wordWrapWidth: 620
+      wordWrap: { width: 450, useAdvancedWrap: true }
     };
 
     this.mainText = this.add.text(10, 10, '', this.textStyle);
+
 
     this.continueStory();
   }
@@ -35,5 +36,6 @@ export default class GameScene extends Phaser.Scene {
     }
 
     this.mainText.setText(txt);
+    console.log(JSON.parse(this.introDialogue.currentTags) );
   }
 }
