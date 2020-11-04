@@ -1,14 +1,14 @@
 import Phaser from 'phaser';
-import StoryText from '../ui-objects/story-text';
-import Align from '../utils/align';
+import TextBox from '../ui-objects/text-box';
+import AlignGrid from '../utils/alignGrid';
 
 export default class UiScene extends Phaser.Scene {
   constructor() {
     super('UI');
   }
 
-  onUpdateText({ text }) {
-    this.storyText.update(text);
+  onUpdateText(data) {
+    this.textBox.update(data);
   }
 
   init() {
@@ -16,8 +16,13 @@ export default class UiScene extends Phaser.Scene {
   }
 
   create() {
-    this.storyText = new StoryText({ scene: this, x: 0, y: 0});
-    Align.center(this.storyText, this); 
+    this.grid = new AlignGrid({ scene: this });
+    this.grid.show();
+    this.grid.showNumbers();
+
+    this.textBox = new TextBox(this);
+
+    this.grid.placeAt( 2, 3, this.textBox);
 
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
 

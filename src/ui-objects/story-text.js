@@ -8,7 +8,7 @@ export default class StoryText extends Phaser.GameObjects.Text {
       fontSize: 12,
       wordWrap:
       {
-        width: scene.scale.width * 0.9,
+        width: scene.scale.width * 0.6,
         useAdvancedWrap: true 
       }
     };
@@ -19,7 +19,7 @@ export default class StoryText extends Phaser.GameObjects.Text {
     this.setOrigin(0.5);
   }
 
-  update(text) {
+  update({ text }) {
     this.setText(text);
   }
 
