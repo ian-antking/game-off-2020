@@ -30,6 +30,10 @@ export default class UiScene extends Phaser.Scene {
       this.gameScene.continueStory();
     });
 
+    this.input.on('pointerdown', () => {
+      this.gameScene.continueStory();
+    });
+
     this.gameScene.continueStory();
   }
 }

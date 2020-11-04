@@ -16,7 +16,7 @@ export default class TitleScene extends Phaser.Scene {
     this.logo.setScale(0.75);
 
     this.titleText = this.make.text({
-      text: 'Press Spacebar',
+      text: 'Press Spacebar or Touch',
       style: {
         font: '20px future-thin',
         fill: '#ffffff',
@@ -27,7 +27,15 @@ export default class TitleScene extends Phaser.Scene {
     this.titleText.y += 100;
 
     this.input.keyboard.on('keydown-SPACE', () => {
-      this.scene.start('Game');
+      this.startGame();
     });
+
+    this.input.on('pointerdown', () => {
+      this.startGame();
+    });
+  }
+
+  startGame() {
+    this.scene.start('Game');
   }
 }
