@@ -21,7 +21,7 @@ export default class TextBox extends Phaser.GameObjects.Container {
 
     this.setSize(this.scene.scale.width, this.scene.scale.height * 0.6);
     this.add(this.graphics);
-    this.add(new StoryText({ scene: this.scene, x: 0, y: 0 }));
+    this.add(new StoryText({ scene: this.scene, x: 50, y: 0 }));
     this.add(new NameTag({ scene: this.scene, x: -290, y: - 60 }));
 
     this.graphics.fillRect(0 - this.scene.scale.width / 2, 0 - this.scene.scale.height * 0.2 , this.scene.scale.width, this.scene.scale.height * 0.4);

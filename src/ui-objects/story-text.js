@@ -5,10 +5,10 @@ export default class StoryText extends Phaser.GameObjects.Text {
     const style =       {
       color: '#ffffff',
       align: 'left',
-      fontSize: 12,
+      font: '12pt future-thin',
       wordWrap:
       {
-        width: scene.scale.width * 0.6,
+        width: scene.scale.width * 0.7,
         useAdvancedWrap: true 
       }
     };

@@ -5,7 +5,7 @@ export default class NameTage extends Phaser.GameObjects.Text{
     const style =       {
       color: '#ffffff',
       align: 'left',
-      fontSize: 14,
+      font: '12pt future-thin',
     };
     super(scene, x, y, '', style);
     this.scene = scene;
