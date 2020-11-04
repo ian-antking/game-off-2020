@@ -10,32 +10,32 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.introDialogue = this.cache.json.get('test-intro');
-    this.metaDialogue = this.cache.json.get('meta-test');
+    this.dialogue = this.cache.json.get('pride-and-prejudice');
 
-    this.introDialogue = new Story(this.metaDialogue);
+    this.story = new Story(this.dialogue);
 
-    this.textStyle = {
-      fill: '#ffffff',
-      font: '12px future-thin',
-      align: 'left',
-      wordWrap: { width: 450, useAdvancedWrap: true }
-    };
-
-    this.mainText = this.add.text(10, 10, '', this.textStyle);
-
-
-    this.continueStory();
+    this.scene.launch('UI');
   }
 
   continueStory() {
-    let txt = '';
+    let text;
+    let data;
 
-    while (this.introDialogue.canContinue) {
-      txt += this.introDialogue.Continue();
+    if (this.story.canContinue) {
+      text = this.story.Continue();
+      const tags = this.story.currentTags;
+      
+      try {
+        data = JSON.parse(tags);
+      } catch (error) {
+        console.warn({ message: error.message, text, tags });
+        data = {};
+      }
+
+    } else {
+      text = 'The End?';
+      data = {};
     }
-
-    this.mainText.setText(txt);
-    console.log(JSON.parse(this.introDialogue.currentTags) );
+    this.events.emit('UpdateText', { text, data });
   }
 }
