@@ -1,6 +1,7 @@
 import 'phaser';
 import { Story } from 'inkjs';
 import Character from '../sprites/character';
+import characters from '../config/characters';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -15,23 +16,13 @@ export default class GameScene extends Phaser.Scene {
 
     this.story = new Story(this.dialogue);
 
-    this.mrBennet = new Character({
-      name: 'Mr. Bennet',
+    this.characters = characters.map((character) => new Character({
+      name: character.name,
       scene: this,
       x: this.scale.width/2,
       y: (this.scale.height/2)+50,
-      textureKey: 'Mr. Bennet',
-    });
-
-    this.mrsBennet = new Character({
-      name: 'Mrs. Bennet',
-      scene: this,
-      x: this.scale.width/2,
-      y: (this.scale.height/2)+50,
-      textureKey: 'Mrs. Bennet',
-    });
-
-    this.characters = [this.mrBennet, this.mrsBennet];
+      textureKey: character.texture,
+    }));
 
     this.scene.launch('UI');
   }
