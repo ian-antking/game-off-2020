@@ -1,5 +1,6 @@
 import 'phaser';
 import { Story } from 'inkjs';
+import Character from '../sprites/character';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -13,6 +14,13 @@ export default class GameScene extends Phaser.Scene {
     this.dialogue = this.cache.json.get('pride-and-prejudice');
 
     this.story = new Story(this.dialogue);
+
+    this.character = new Character({
+      scene: this,
+      x: this.scale.width/2,
+      y: (this.scale.height/2)+50,
+      textureKey: 'test-character',
+    });
 
     this.scene.launch('UI');
   }
