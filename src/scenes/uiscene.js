@@ -17,8 +17,8 @@ export default class UiScene extends Phaser.Scene {
 
   create() {
     this.grid = new AlignGrid({ scene: this });
-    this.grid.show();
-    this.grid.showNumbers();
+    // this.grid.show();
+    // this.grid.showNumbers();
 
     this.textBox = new TextBox(this);
 
