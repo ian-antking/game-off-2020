@@ -15,12 +15,23 @@ export default class GameScene extends Phaser.Scene {
 
     this.story = new Story(this.dialogue);
 
-    this.character = new Character({
+    this.mrBennet = new Character({
+      name: 'Mr. Bennet',
       scene: this,
       x: this.scale.width/2,
       y: (this.scale.height/2)+50,
-      textureKey: 'test-character',
+      textureKey: 'Mr. Bennet',
     });
+
+    this.mrsBennet = new Character({
+      name: 'Mrs. Bennet',
+      scene: this,
+      x: this.scale.width/2,
+      y: (this.scale.height/2)+50,
+      textureKey: 'Mrs. Bennet',
+    });
+
+    this.characters = [this.mrBennet, this.mrsBennet];
 
     this.scene.launch('UI');
   }
@@ -46,6 +57,11 @@ export default class GameScene extends Phaser.Scene {
       text = 'The End?';
       data = {};
     }
+
+    this.characters.forEach((character) => {
+      character.visible = character.name === data.name;
+    });
+
     this.events.emit('UpdateText', { text, data, choices });
   }
 
