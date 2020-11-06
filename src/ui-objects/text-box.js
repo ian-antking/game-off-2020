@@ -19,9 +19,20 @@ export default class TextBox extends Phaser.GameObjects.Container {
       }
     });
 
+    const style = {
+      color: '#ffffff',
+      align: 'left',
+      font: '12pt future-thin',
+      wordWrap:
+      {
+        width: scene.scale.width * 0.9,
+        useAdvancedWrap: true 
+      }
+    }
+
     this.setSize(this.scene.scale.width, this.scene.scale.height * 0.6);
     this.add(this.graphics);
-    this.add(new Text({ scene: this.scene, x: 0, y: 50 }));
+    this.add(new Text({ scene: this.scene, x: -300, y: 30, style }));
     this.add(new NameTag({ scene: this.scene, x: -300, y: -this.scene.scale.height * 0.6 }));
 
     this.graphics.fillRect(0 - this.scene.scale.width / 2, 15 , this.scene.scale.width, this.scene.scale.height * 0.4);

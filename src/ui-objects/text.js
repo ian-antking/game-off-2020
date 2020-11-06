@@ -1,22 +1,11 @@
 import Phaser from 'phaser';
 
 export default class StoryText extends Phaser.GameObjects.Text {
-  constructor({ scene, x, y }) {
-    const style =       {
-      color: '#ffffff',
-      align: 'left',
-      font: '12pt future-thin',
-      wordWrap:
-      {
-        width: scene.scale.width * 0.9,
-        useAdvancedWrap: true 
-      }
-    };
+  constructor({ scene, x, y, style }) {
     super(scene, x, y, '', style);
     this.scene = scene;
 
     this.scene.add.existing(this);
-    this.setOrigin(0.5);
   }
 
   _animateText(text) {
@@ -26,7 +15,7 @@ export default class StoryText extends Phaser.GameObjects.Text {
 
     this.setText('');
     this.timedEvent = this.scene.time.addEvent({
-      delay: 60,
+      delay: 30,
       callback: () => {
         this.letterIndex++;
         this.setText(this.text + this.dialogue[this.letterIndex - 1]);
