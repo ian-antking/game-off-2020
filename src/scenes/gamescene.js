@@ -16,6 +16,12 @@ export default class GameScene extends Phaser.Scene {
 
     this.story = new Story(this.dialogue);
 
+    this.backdrop = this.add.image(this.scale.width/2, this.scale.height/2, 'test-cafe');
+
+    this.backdrop.displayWidth = this.scale.width;
+
+    this.backdrop.displayHeight = this.scale.height;
+
     this.characters = characters.map((character) => new Character({
       name: character.name,
       scene: this,

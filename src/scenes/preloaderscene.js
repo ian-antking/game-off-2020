@@ -81,6 +81,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(1000, this.ready, [], this);
     this.load.image('logo', 'assets/logo.png');
+    this.load.image('test-cafe', 'assets/test-cafe.jpg');
     this.load.image('mr-bennet', 'assets/mr-bennet.png');
     this.load.image('mrs-bennet', 'assets/mrs-bennet.png');
     this.load.json('pride-and-prejudice', 'dialogue/pride-and-prejudice.json');
