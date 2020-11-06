@@ -35,32 +35,23 @@ export default class GameScene extends Phaser.Scene {
   }
 
   continueStory() {
-    let text;
     let data;
-    let choices;
+    const choices = this.story.currentChoices;
+    const text = this.story.canContinue ? this.story.Continue() : null
+    const tags = this.story.currentTags;
 
-    if (this.story.canContinue) {
-      text = this.story.Continue();
-      choices = this.story.currentChoices;
-      const tags = this.story.currentTags;
-      
-      try {
-        data = JSON.parse(tags);
-      } catch (error) {
-        console.warn({ message: error.message, text, tags });
-        data = {};
-      }
-
-    } else {
-      text = 'The End?';
+    try {
+      data = JSON.parse(tags);
+    } catch (error) {
+      console.warn({ message: error.message, text, tags });
       data = {};
     }
 
-    this.characters.forEach((character) => {
-      character.visible = character.name === data.name;
-    });
-
     this.events.emit('UpdateText', { text, data, choices });
+    
+    this.characters.forEach((character) => {
+      character.visible = character.name === data?.name;
+    });
   }
 
   handleChoice(choiceIndex) {
