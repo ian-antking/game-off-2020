@@ -19,7 +19,7 @@ export default class TextBox extends Phaser.GameObjects.Container {
       }
     });
 
-    const style = {
+    const dialogueStyle = {
       color: '#ffffff',
       align: 'left',
       font: '12pt future-thin',
@@ -30,10 +30,16 @@ export default class TextBox extends Phaser.GameObjects.Container {
       }
     }
 
+    const nameTagStyle = {
+      color: '#ffffff',
+      align: 'left',
+      font: '12pt future-thin',
+    };
+
     this.setSize(this.scene.scale.width, this.scene.scale.height * 0.6);
     this.add(this.graphics);
-    this.add(new Text({ scene: this.scene, x: -300, y: 30, style }));
-    this.add(new NameTag({ scene: this.scene, x: -300, y: -this.scene.scale.height * 0.6 }));
+    this.add(new Text({ scene: this.scene, x: -300, y: 30, style: dialogueStyle }));
+    this.add(new NameTag({ scene: this.scene, x: -300, y: -this.scene.scale.height * 0.6, nameTagStyle }));
 
     this.graphics.fillRect(0 - this.scene.scale.width / 2, 15 , this.scene.scale.width, this.scene.scale.height * 0.4);
     this.graphics.strokeRect(2 - this.scene.scale.width / 2, 15 , this.scene.scale.width - 4, this.scene.scale.height * 0.4);
