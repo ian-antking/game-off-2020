@@ -33,6 +33,6 @@ export default class DialogueBox extends Column {
 
   update({ text, data }) {
     this.dialogue.update(text, true);
-    this.nameTag.update(data.name);
+    data.name && this.nameTag.update(`${data.name}:`);
   }
 }
