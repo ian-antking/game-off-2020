@@ -16,23 +16,29 @@ export default class TitleScene extends Phaser.Scene {
     this.logo.setScale(0.75);
 
     this.titleText = this.make.text({
-      text: 'Press Spacebar or Touch',
+      text: 'New Game',
       style: {
         font: '20px future-thin',
         fill: '#ffffff',
       },
     });
-    this.titleText.setOrigin(0.5, 0.5);
+    this.titleText
+    .setOrigin(0.5, 0.5)
+    .setInteractive()
+    .on('pointerover', () => this.enterButtonHoverState())
+    .on('pointerout', () => this.enterButtonRestState())
+    .on('pointerdown', () => this.startGame());
+
     Align.center(this.titleText, this);
     this.titleText.y += 100;
+  }
 
-    this.input.keyboard.on('keydown-SPACE', () => {
-      this.startGame();
-    });
+  enterButtonHoverState() {
+    this.titleText.setStyle({ fill: '#ff0'});
+  }
 
-    this.input.on('pointerdown', () => {
-      this.startGame();
-    });
+  enterButtonRestState() {
+    this.titleText.setStyle({ fill: '#fff' });
   }
 
   startGame() {
