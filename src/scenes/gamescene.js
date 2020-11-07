@@ -50,7 +50,7 @@ export default class GameScene extends Phaser.Scene {
     this.events.emit('UpdateText', { text, data, choices });
     
     this.characters.forEach((character) => {
-      character.visible = character.name === data?.name;
+      character.update(data);
     });
   }
 
