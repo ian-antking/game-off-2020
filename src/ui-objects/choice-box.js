@@ -20,7 +20,7 @@ export default class ChoiceBox extends Column {
         style: this.choiceStyle,
         choice,
       });
-      this.addNode(choiceText, 0, 8);
+      this.addNode(choiceText, 0, 25);
     });
   }
 
