@@ -24,7 +24,21 @@ export default class UiScene extends Phaser.Scene {
     this.grid = new AlignGrid({ scene: this });
     this.graphics = this.add.graphics();
 
-    this.bar = this.graphics.fillRect(0, 250, this.scale.width, this.scale.height/2);
+    this.graphics.setDefaultStyles({
+      lineStyle: {
+        width: 6,
+        color: 0xec9ded,
+        alpha: 1
+      },
+      fillStyle: {
+        color: 0x62466b,
+        alpha: 0.5
+      }
+    });
+
+    this.graphics.fillRoundedRect(5, 250, this.scale.width - 10, this.scale.height/2);
+    this.graphics.strokeRoundedRect(5, 250, this.scale.width - 10, this.scale.height/2);
+
 
     this.uiBar = new UiBar(this);
     this.grid.placeAt( 2, 3, this.uiBar);
