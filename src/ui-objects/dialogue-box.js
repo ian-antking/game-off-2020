@@ -3,7 +3,7 @@ import Text from './text';
 
 export default class DialogueBox extends Column {
   constructor({ scene, x, y }) {
-    super(scene, x, y)
+    super(scene, x, y);
     this.scene = scene;
 
     this.dialogueStyle = {
@@ -15,7 +15,7 @@ export default class DialogueBox extends Column {
         width: scene.scale.width * 0.5,
         useAdvancedWrap: true 
       }
-    }
+    };
 
     this.nameTagStyle = {
       color: '#ffffff',

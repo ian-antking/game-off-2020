@@ -3,7 +3,7 @@ import Choice from './choice';
 
 export default class ChoiceBox extends Column {
   constructor({ scene, x, y, choices }) {
-    super(scene, x, y)
+    super(scene, x, y);
     this.scene = scene;
 
     this.choiceStyle = {
@@ -19,9 +19,9 @@ export default class ChoiceBox extends Column {
         y: 0,
         style: this.choiceStyle,
         choice,
-      })
-      this.addNode(choiceText, 0, 8)
-    })
+      });
+      this.addNode(choiceText, 0, 8);
+    });
   }
 
   clearChoices() {

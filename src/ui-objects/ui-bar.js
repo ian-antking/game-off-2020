@@ -11,7 +11,7 @@ export default class UiBar extends Row {
 
     this.dialogueBox = new DialogueBox({ scene, x:-300, y:0 });
 
-    this.addNode(this.dialogueBox, 0, 0)
+    this.addNode(this.dialogueBox, 0, 0);
   }
 
   removeChoices() {

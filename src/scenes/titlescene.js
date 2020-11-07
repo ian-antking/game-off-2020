@@ -23,11 +23,11 @@ export default class TitleScene extends Phaser.Scene {
       },
     });
     this.titleText
-    .setOrigin(0.5, 0.5)
-    .setInteractive()
-    .on('pointerover', () => this.enterButtonHoverState())
-    .on('pointerout', () => this.enterButtonRestState())
-    .on('pointerdown', () => this.startGame());
+      .setOrigin(0.5, 0.5)
+      .setInteractive()
+      .on('pointerover', () => this.enterButtonHoverState())
+      .on('pointerout', () => this.enterButtonRestState())
+      .on('pointerdown', () => this.startGame());
 
     Align.center(this.titleText, this);
     this.titleText.y += 100;
