@@ -11,6 +11,10 @@ export default class UiScene extends Phaser.Scene {
     this.uiBar.update(data);
   }
 
+  handleChoiceClick(index) {
+    this.gameScene.handleChoice(index);
+  }
+
   init() {
     this.gameScene = this.scene.get('Game');
   }

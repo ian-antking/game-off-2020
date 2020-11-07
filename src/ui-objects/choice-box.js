@@ -1,5 +1,5 @@
 import { Column } from 'phaser-ui-tools';
-import Text from './text';
+import Choice from './choice';
 
 export default class ChoiceBox extends Column {
   constructor({ scene, x, y, choices }) {
@@ -13,16 +13,13 @@ export default class ChoiceBox extends Column {
     };
 
     choices.forEach(choice => {
-      const choiceText = new Text({
+      const choiceText = new Choice({
         scene: this.scene,
         x: 0,
         y: 0,
-        style: this.choiceStyle
+        style: this.choiceStyle,
+        choice,
       })
-      choiceText.update(choice.text);
-      choiceText.setInteractive();
-
-      // choiceText.on('pointerover', () => { console.log('Boom') });
       this.addNode(choiceText, 0, 8)
     })
 

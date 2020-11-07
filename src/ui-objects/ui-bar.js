@@ -19,7 +19,7 @@ export default class UiBar extends Row {
 
     if (data.choices.length) {
       this.choiceBox = new ChoiceBox({scene: this.scene, x: 0, y: 0, choices: data.choices});
-      this.addNode(this.choiceBox, 350, 0);
+      this.addNode(this.choiceBox, 400, 0);
     }
   }
 }
