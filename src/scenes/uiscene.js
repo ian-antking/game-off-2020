@@ -22,9 +22,11 @@ export default class UiScene extends Phaser.Scene {
 
   create() {
     this.grid = new AlignGrid({ scene: this });
+    this.graphics = this.add.graphics();
+
+    this.bar = this.graphics.fillRect(0, 250, this.scale.width, this.scale.height/2);
 
     this.uiBar = new UiBar(this);
-
     this.grid.placeAt( 2, 3, this.uiBar);
 
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
