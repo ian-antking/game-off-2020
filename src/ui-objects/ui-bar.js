@@ -1,4 +1,5 @@
 import { Row } from 'phaser-ui-tools';
+import ChoiceBox from './choice-box';
 import DialogueBox from './dialogue-box';
 
 export default class UiBar extends Row {
@@ -10,10 +11,15 @@ export default class UiBar extends Row {
 
     this.dialogueBox = new DialogueBox({scene, x:-300, y:0});
 
-    this.addNode(this.dialogueBox, 100, 0)
+    this.addNode(this.dialogueBox, 0, 0)
   }
 
   update(data) {
     this.dialogueBox.update(data);
+
+    if (data.choices.length) {
+      this.choiceBox = new ChoiceBox({scene: this.scene, x: 0, y: 0, choices: data.choices});
+      this.addNode(this.choiceBox, 350, 0);
+    }
   }
 }
