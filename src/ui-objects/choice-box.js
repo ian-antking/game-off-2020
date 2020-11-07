@@ -22,6 +22,9 @@ export default class ChoiceBox extends Column {
       })
       this.addNode(choiceText, 0, 8)
     })
+  }
 
+  clearChoices() {
+    this.destroy();
   }
 }

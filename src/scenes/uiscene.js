@@ -12,6 +12,7 @@ export default class UiScene extends Phaser.Scene {
   }
 
   handleChoiceClick(index) {
+    this.uiBar.removeChoices();
     this.gameScene.handleChoice(index);
   }
 

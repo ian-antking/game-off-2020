@@ -20,7 +20,6 @@ export default class Choice extends Text {
   }
 
   handleClick() {
-    console.log(this.choice);
     this.scene.handleChoiceClick(this.choice.index);
   }
 }
