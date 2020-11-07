@@ -12,7 +12,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.dialogue = this.cache.json.get('pride-and-prejudice');
+    this.dialogue = this.cache.json.get('00-intro');
 
     this.story = new Story(this.dialogue);
 
