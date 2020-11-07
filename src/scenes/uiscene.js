@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import TextBox from '../ui-objects/text-box';
+import UiBar from '../ui-objects/ui-bar';
 import AlignGrid from '../utils/alignGrid';
 
 export default class UiScene extends Phaser.Scene {
@@ -8,7 +8,7 @@ export default class UiScene extends Phaser.Scene {
   }
 
   onUpdateText(data) {
-    this.textBox.update(data);
+    this.uiBar.update(data);
   }
 
   init() {
@@ -17,12 +17,10 @@ export default class UiScene extends Phaser.Scene {
 
   create() {
     this.grid = new AlignGrid({ scene: this });
-    // this.grid.show();
-    // this.grid.showNumbers();
 
-    this.textBox = new TextBox(this);
+    this.uiBar = new UiBar(this);
 
-    this.grid.placeAt( 2, 3, this.textBox);
+    this.grid.placeAt( 2, 3, this.uiBar);
 
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
 

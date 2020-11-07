@@ -28,8 +28,8 @@ export default class StoryText extends Phaser.GameObjects.Text {
     });
   }
 
-  update({ text, data }) {
-    if (data.name) {
+  update(text, animated = false) {
+    if (animated) {
       this._animateText(text);
     } else {
       this.setText(text);
