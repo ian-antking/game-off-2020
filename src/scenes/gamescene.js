@@ -16,8 +16,14 @@ export default class GameScene extends Phaser.Scene {
 
     this.story = new Story(this.dialogue);
 
-    this.backdrop = this.add.image(this.scale.width/2, this.scale.height/2, 'test-cafe');
-    this.backdrop.setAlpha(0.5);
+    this.backdrop = this.add.image(this.scale.width/2, this.scale.height/2, 'moonshot-main');
+
+    this.backdrop.setAlpha(0);
+    this.tweens.add({
+      targets: this.backdrop,
+      duration: 500,
+      alpha: 1
+    });
 
     this.backdrop.displayWidth = this.scale.width;
 
@@ -51,6 +57,8 @@ export default class GameScene extends Phaser.Scene {
       data: this.currentStoryData,
       choices: this.currentChoices
     });
+
+    this.currentStoryData.background && this.backdrop.setTexture(this.currentStoryData.background);
     
     this.characters.forEach((character) => {
       character.update(this.currentStoryData);

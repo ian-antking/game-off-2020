@@ -80,9 +80,22 @@ export default class PreloaderScene extends Phaser.Scene {
     });
 
     this.timedEvent = this.time.delayedCall(1000, this.ready, [], this);
+
+    //images
     this.load.image('logo', 'assets/logo.png');
-    this.load.image('test-cafe', 'assets/test-cafe.jpg');
     this.load.image('fenrir', 'assets/fenrir.png');
+    
+    //backgrounds
+    this.load.image('moonshot-main', 'assets/backgrounds/cafe/moonshot-main.png');
+    this.load.image('moonshot-outside', 'assets/backgrounds/cafe/moonshot-outside.png');
+
+    this.load.image('intro-1', 'assets/backgrounds/intro/intro-1.png');
+    this.load.image('intro-2', 'assets/backgrounds/intro/intro-2.png');
+    this.load.image('intro-3', 'assets/backgrounds/intro/intro-3.png');
+    this.load.image('intro-4', 'assets/backgrounds/intro/intro-4.png');
+    this.load.image('intro-5', 'assets/backgrounds/intro/intro-5.png');
+
+    //dialogues
     this.load.json('00-intro', 'dialogue/00-intro.json');
   }
 
