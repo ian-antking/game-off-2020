@@ -9,7 +9,7 @@ export default class UiBar extends Row {
 
     this.setSize(this.scene.scale.width, this.scene.scale.height * 0.6);
 
-    this.dialogueBox = new DialogueBox({ scene, x:-300, y:0 });
+    this.dialogueBox = new DialogueBox({ scene, x:-325, y:-20 });
 
     this.addNode(this.dialogueBox, 0, 0);
   }
