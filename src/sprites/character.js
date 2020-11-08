@@ -11,6 +11,6 @@ export default class Character extends Phaser.GameObjects.Sprite {
   }
 
   update({ name }) {
-    this.visible = this.name === name;
+    this.visible = this.name.toLowerCase() === name;
   }
 }
