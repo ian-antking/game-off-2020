@@ -1,8 +1,11 @@
-import 'phaser';
+import Phaser from 'phaser';
 
 export default {
   type: Phaser.AUTO,
-  parent: 'phaser-example',
+  scale: {
+    mode: Phaser.Scale.FIT,
+  },
+  parent: 'phaser-game',
   width: 700,
   height: 400,
 };
