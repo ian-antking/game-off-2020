@@ -24,9 +24,9 @@ export default class BootScene extends Phaser.Scene {
   }
 
   create() {
-    window.focus();
-    this.resizeGame();
-    window.addEventListener('resize', this.resizeGame);
+    // window.focus();
+    // this.resizeGame();
+    // window.addEventListener('resize', this.resizeGame);
     this.scene.start('Preloader');
   }
 }
