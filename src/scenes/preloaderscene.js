@@ -1,4 +1,6 @@
 import 'phaser';
+import characters from '../config/characters';
+import cutScenes from '../config/cut-scenes';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -83,22 +85,34 @@ export default class PreloaderScene extends Phaser.Scene {
 
     //images
     this.load.image('logo', 'assets/logo.png');
-    this.load.image('fenrir', 'assets/fenrir.png');
     
     //backgrounds
     this.load.image('moonshot-main', 'assets/backgrounds/cafe/moonshot-main.png');
     this.load.image('moonshot-outside', 'assets/backgrounds/cafe/moonshot-outside.png');
 
-    this.load.image('intro-1', 'assets/backgrounds/intro/intro-1.png');
-    this.load.image('intro-2', 'assets/backgrounds/intro/intro-2.png');
-    this.load.image('intro-3', 'assets/backgrounds/intro/intro-3.png');
-    this.load.image('intro-4', 'assets/backgrounds/intro/intro-4.png');
-    this.load.image('intro-5', 'assets/backgrounds/intro/intro-5.png');
+    //cutscenes
+    cutScenes.forEach((cutScene) => this.loadCutScene(cutScene));
 
     //dialogues
     this.load.json('00-intro', 'dialogue/00-intro.json');
+
+    //characters
+    characters.forEach((name) => this.loadCharacterData(name.toLowerCase()));
+
+
   }
 
-  create() {
+  loadCutScene({ name, frames }) {
+    for (let frame = 1; frame <= frames; frame += 1) {
+      this.load.image(`${name}-${frame}`, `assets/backgrounds/${name}/${name}-${frame}.png`);
+    }
+  }
+
+  loadCharacterData(character) {
+    const moods = ['attention', 'excited', 'neutral', 'wave', 'wink1', 'wink2'];
+    moods.forEach(mood => {
+      const key = `${character}-${mood}`;
+      this.load.image(key, `assets/characters/${character}/${key}.png`);
+    });
   }
 }
