@@ -17,11 +17,10 @@ export default class GameScene extends Phaser.Scene {
     this.story = new Story(this.dialogue);
 
     this.characters = characters.map((character) => new Character({
-      name: character.name,
+      name: character,
       scene: this,
-      x: this.scale.width/2,
-      y: (this.scale.height/2)+50,
-      textureKey: character.texture,
+      x: this.scale.width * 0.7,
+      y: this.scale.height/2,
     }));
 
     this.scene.launch('UI');

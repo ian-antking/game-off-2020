@@ -1,6 +1,1 @@
-export default [
-  {
-    name: 'Fenrir',
-    texture: 'fenrir'
-  }
-];
+export default ['Fenrir'];
