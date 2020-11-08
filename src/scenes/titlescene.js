@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import Align from '../utils/align';
 
 export default class TitleScene extends Phaser.Scene {

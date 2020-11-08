@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import characters from '../config/characters';
 import cutScenes from '../config/cut-scenes';
 

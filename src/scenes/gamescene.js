@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import { Story } from 'inkjs';
 import Character from '../sprites/character';
 import characters from '../config/characters';
