@@ -1,4 +1,4 @@
-import Background from './background';
+import Background from '../images/background';
 
 export default class BackgroundManager {
   constructor ({ scene, backgroundNames }) {

@@ -3,7 +3,7 @@ import { Story } from 'inkjs';
 import Character from '../sprites/character';
 import characters from '../config/characters';
 import backgrounds from '../config/backgrounds';
-import BackgroundManager from '../images/background-manager';
+import BackgroundManager from '../utils/background-manager';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
