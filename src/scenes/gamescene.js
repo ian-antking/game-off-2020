@@ -2,7 +2,8 @@ import Phaser from 'phaser';
 import { Story } from 'inkjs';
 import Character from '../sprites/character';
 import characters from '../config/characters';
-import Background from '../images/background';
+import backgrounds from '../config/backgrounds';
+import BackgroundManager from '../images/background-manager';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -15,6 +16,11 @@ export default class GameScene extends Phaser.Scene {
   create() {
     this.dialogue = this.cache.json.get('00-intro');
     this.story = new Story(this.dialogue);
+
+    this.backgroundManager = new BackgroundManager({ 
+      scene: this,
+      backgroundNames: backgrounds
+    });
 
     this.characters = characters.map((character) => new Character({
       name: character,
@@ -44,8 +50,8 @@ export default class GameScene extends Phaser.Scene {
       choices: this.currentChoices
     });
 
-    this.background = this.currentStoryData.background ? new Background(this, this.currentStoryData.background) : this.background;
-    
+    this.backgroundManager.update(this.currentStoryData);
+
     this.characters.forEach((character) => {
       character.update(this.currentStoryData);
     });

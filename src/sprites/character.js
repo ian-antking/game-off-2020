@@ -8,7 +8,7 @@ export default class Character extends Phaser.GameObjects.Sprite {
     this.setScale(0.5);
     this.scene.add.existing(this);
     this.alpha = 0;
-    this.depth=1;
+    this.depth=10;
   }
 
   update({ name, mood }) {
