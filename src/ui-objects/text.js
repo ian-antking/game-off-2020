@@ -15,7 +15,7 @@ export default class StoryText extends Phaser.GameObjects.Text {
 
     this.setText('');
     this.timedEvent = this.scene.time.addEvent({
-      delay: 30,
+      delay: 20,
       callback: () => {
         this.letterIndex++;
         this.setText(this.text + this.dialogue[this.letterIndex - 1]);
