@@ -28,4 +28,8 @@ export default class Background extends Phaser.GameObjects.Image {
       alpha: 0
     });
   }
+
+  update(action) {
+    this[action]();
+  }
 }
