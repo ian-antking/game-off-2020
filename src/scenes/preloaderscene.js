@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import characters from '../config/characters';
-import cutScenes from '../config/cut-scenes';
+import backgrounds from '../config/backgrounds';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -85,27 +85,19 @@ export default class PreloaderScene extends Phaser.Scene {
 
     //images
     this.load.image('logo', 'assets/logo.png');
-    
-    //backgrounds
-    this.load.image('moonshot-main', 'assets/backgrounds/cafe/moonshot-main.png');
-    this.load.image('moonshot-outside', 'assets/backgrounds/cafe/moonshot-outside.png');
 
     //cutscenes
-    cutScenes.forEach((cutScene) => this.loadCutScene(cutScene));
+    backgrounds.forEach((background) => this.loadBackground(background));
 
     //dialogues
     this.load.json('00-intro', 'dialogue/00-intro.json');
 
     //characters
     characters.forEach((name) => this.loadCharacterData(name.toLowerCase()));
-
-
   }
 
-  loadCutScene({ name, frames }) {
-    for (let frame = 1; frame <= frames; frame += 1) {
-      this.load.image(`${name}-${frame}`, `assets/backgrounds/${name}/${name}-${frame}.png`);
-    }
+  loadBackground(background) {
+    this.load.image(background, `assets/backgrounds/${background}.png`);
   }
 
   loadCharacterData(character) {
