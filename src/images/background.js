@@ -11,10 +11,21 @@ export default class Background extends Phaser.GameObjects.Image {
     this.depth=0;
     this.alpha=0;
     this.scene.add.existing(this);
-    // this.scene.tweens.add({
-    //   targets: this,
-    //   duration: 500,
-    //   alpha: 0.5
-    // });
+  }
+
+  show() {
+    this.scene.tweens.add({
+      targets: this,
+      duration: 500,
+      alpha: 1
+    });
+  }
+
+  hide() {
+    this.scene.tweens.add({
+      targets: this,
+      duration: 750,
+      alpha: 0
+    });
   }
 }
