@@ -16,7 +16,7 @@ export default class Character extends Phaser.GameObjects.Sprite {
     if (mood) {
       this.setTexture(this.textureKey);
     }
-    if (this.name.toLowerCase() === name) {
+    if (this.name === name) {
       this.scene.tweens.add({
         targets: this,
         duration: 500,
