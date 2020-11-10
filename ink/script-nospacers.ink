@@ -26,7 +26,7 @@ Let's find out! #{"background": "moonshot-outside"}
 
 === introduction_splash ===
 
-introduction
+introduction #{"hide": true, "background": "none"}
 
 -> guide_1
 
