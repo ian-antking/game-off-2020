@@ -19,8 +19,8 @@ export default class GameScene extends Phaser.Scene {
       backgroundNames: backgrounds
     });
 
-    this.characters = characters.map((character) => new Character({
-      name: character,
+    this.characters = characters.map(({ name }) => new Character({
+      name,
       scene: this,
       x: this.scale.width * 0.7,
       y: this.scale.height/2,

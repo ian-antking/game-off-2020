@@ -93,18 +93,18 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.json('00-intro', 'dialogue/00-intro.json');
 
     //characters
-    characters.forEach((name) => this.loadCharacterData(name.toLowerCase()));
+    characters.forEach((character) => this.loadCharacterData(character));
   }
 
   loadBackground(background) {
     this.load.image(background, `assets/backgrounds/${background}.png`);
   }
 
-  loadCharacterData(character) {
-    const moods = ['attention', 'excited', 'neutral', 'wave', 'wink1', 'wink2'];
+  loadCharacterData({ name, moods }) {
+    const lowerCaseName = name.toLowerCase();
     moods.forEach(mood => {
-      const key = `${character}-${mood}`;
-      this.load.image(key, `assets/characters/${character}/${key}.png`);
+      const key = `${lowerCaseName}-${mood}`;
+      this.load.image(key, `assets/characters/${lowerCaseName}/${key}.png`);
     });
   }
 }
