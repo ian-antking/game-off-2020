@@ -11,6 +11,8 @@ export default class Choice extends Text {
       .on('pointerdown', () => this.handleClick());
   }
 
+  handleSkipText() {}
+
   enterButtonHoverState() {
     this.setStyle({ fill: '#ff0'});
   }

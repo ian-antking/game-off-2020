@@ -60,7 +60,11 @@ export default class UiScene extends Phaser.Scene {
     this.events.on('ContinueClick', this.handleContinueClick, this);
 
     this.input.keyboard.on('keydown-ENTER', () => {
-      this.events.emit('SkipText');
+      !this.continueButton.visible && this.events.emit('SkipText');
+    });
+
+    this.input.on('pointerdown', (event, [continueButton]) => {
+      !continueButton && this.events.emit('SkipText');
     });
 
     this.gameScene.continueStory();
