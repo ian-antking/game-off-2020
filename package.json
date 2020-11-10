@@ -32,6 +32,7 @@
   "dependencies": {
     "inkjs": "^1.11.0",
     "phaser": "^3.3.0",
-    "phaser-ui-tools": "^2.0.0-beta"
+    "phaser-ui-tools": "^2.0.0-beta",
+    "webfontloader": "^1.6.28"
   }
 }

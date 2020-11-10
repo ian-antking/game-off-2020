@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import UiBar from '../ui-objects/ui-bar';
-import AlignGrid from '../utils/alignGrid';
+import AlignGrid from '../utils/align-grid';
 
 export default class UiScene extends Phaser.Scene {
   constructor() {
