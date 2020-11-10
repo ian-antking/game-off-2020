@@ -9,7 +9,8 @@ export default class ChoiceBox extends Column {
     this.choiceStyle = {
       color: '#ffffff',
       align: 'center',
-      font: '13pt future-thin',
+      fontSize: '13pt',
+      fontFamily: 'Play',
     };
 
     choices.forEach(choice => {

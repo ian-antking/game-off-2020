@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import WebFontFile from '../utils/web-font-file';
 import characters from '../config/characters';
 import backgrounds from '../config/backgrounds';
 
@@ -94,6 +95,8 @@ export default class PreloaderScene extends Phaser.Scene {
 
     //characters
     characters.forEach((character) => this.loadCharacterData(character));
+
+    this.load.addFile(new WebFontFile(this.load, ['Press Start 2P', 'Play']));
   }
 
   loadBackground(background) {

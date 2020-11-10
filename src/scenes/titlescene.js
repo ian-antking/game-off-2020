@@ -18,7 +18,8 @@ export default class TitleScene extends Phaser.Scene {
     this.titleText = this.make.text({
       text: 'New Game',
       style: {
-        font: '20px future-thin',
+        fontFamily: '"Press Start 2P"',
+        fontSixe: '20px',
         fill: '#ffffff',
       },
     });

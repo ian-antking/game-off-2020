@@ -9,7 +9,8 @@ export default class DialogueBox extends Column {
     this.dialogueStyle = {
       color: '#ffffff',
       align: 'left',
-      font: '12pt future-thin',
+      fontSize: '12pt',
+      fontFamily: 'Play',
       wordWrap:
       {
         width: scene.scale.width * 0.5,
@@ -20,7 +21,8 @@ export default class DialogueBox extends Column {
     this.nameTagStyle = {
       color: '#ffffff',
       align: 'left',
-      font: '12pt future-thin',
+      fontSize: '12pt',
+      fontFamily: 'Play',
     };
 
     this.nameTag = new Text({ scene: this.scene, x: 0, y: 0, style: this.nameTagStyle });
