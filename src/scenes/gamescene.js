@@ -10,9 +10,6 @@ export default class GameScene extends Phaser.Scene {
     super('Game');
   }
 
-  preload() {
-  }
-
   create() {
     this.dialogue = this.cache.json.get('00-intro');
     this.story = new Story(this.dialogue);
