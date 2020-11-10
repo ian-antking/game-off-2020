@@ -21,11 +21,20 @@ export default class StoryText extends Phaser.GameObjects.Text {
         this.setText(this.text + this.dialogue[this.letterIndex - 1]);
         if (this.letterIndex === this.dialogue.length) {
           this.timedEvent.remove();
+          this.scene.events.emit('TextUpdated');
         }
       },
       callbackScope: this,
       loop: true
     });
+  }
+
+  show() {
+    this.visible = true;
+  }
+
+  hide() {
+    this.visible = false;
   }
 
   update(text, animated = false) {

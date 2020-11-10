@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import UiBar from '../ui-objects/ui-bar';
 import AlignGrid from '../utils/align-grid';
+import ContinueButton from '../sprites/continue-button';
 
 export default class UiScene extends Phaser.Scene {
   constructor() {
@@ -15,6 +16,15 @@ export default class UiScene extends Phaser.Scene {
   handleChoiceClick(index) {
     this.uiBar.removeChoices();
     this.gameScene.handleChoice(index);
+  }
+
+  handleContinueClick() {
+    this.continueButton.hide();
+    this.gameScene.continueStory();
+  }
+
+  textUpdated() {
+    !this.gameScene.currentChoices.length && this.continueButton.show();
   }
 
   init() {
@@ -32,22 +42,30 @@ export default class UiScene extends Phaser.Scene {
       0x62466b,
       0.5
     );
-
     this.bar.setStrokeStyle(5,0xec9ded);
+
+    this.continueButton = new ContinueButton({
+      scene: this,
+      x: this.scale.width - 80,
+      y: this.scale.height - 75,
+      texture: 'continue-button'
+    });
 
     this.uiBar = new UiBar(this);
     this.grid.placeAt( 5, 9, this.uiBar);
     this.grid.placeAt( 5, 10, this.bar);
 
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
+    this.events.on('TextUpdated', this.textUpdated, this);
+    this.events.on('ContinueClick', this.handleContinueClick, this);
 
-    this.input.keyboard.on('keydown-SPACE', () => {
-      this.gameScene.continueStory();
-    });
+    // this.input.keyboard.on('keydown-SPACE', () => {
+    //   this.gameScene.continueStory();
+    // });
 
-    this.input.on('pointerdown', () => {
-      this.gameScene.continueStory();
-    });
+    // this.input.on('pointerdown', () => {
+    //   this.gameScene.continueStory();
+    // });
 
     this.gameScene.continueStory();
   }

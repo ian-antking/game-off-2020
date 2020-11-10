@@ -34,7 +34,12 @@ export default class DialogueBox extends Column {
   }
 
   update({ text, data }) {
-    !data.hide ? this.dialogue.update(text, true) : this.dialogue.update('', false);
+    if ( data.hide ) {
+      this.dialogue.hide();
+    } else {
+      this.dialogue.show();
+    }
+    this.dialogue.update(text, true);
     data.name && this.nameTag.update(`${data.name}:`);
   }
 }

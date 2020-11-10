@@ -86,6 +86,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     //images
     this.load.image('logo', 'assets/logo.png');
+    this.load.image('continue-button', 'assets/continue-button.png');
 
     //cutscenes
     backgrounds.forEach((background) => this.loadBackground(background));
