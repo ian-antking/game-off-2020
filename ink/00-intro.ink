@@ -26,47 +26,47 @@ Let's find out! #{"background": "moonshot-outside"}
 
 === introduction_splash ===
 
-introduction #{"hide": true, "background": "none"}
+introduction
 
 -> guide_1
 
 
 === guide_1 ===
 
-Good evening planets, satellites and all other celestial bodies!  #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
+Good evening planets, satellites and all other celestial bodies!  #{"name": "fenrir", "mood": "wave", "background": "moonshot-main"}
 
 I'm Fenrir, owner of the Moonshot Café and your host for the evening. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
-Tonight is my favourite night of the month. It's Singles Night! #{"name": "fenrir", "mood": "joy", "background": "moonshot-main"}
+Tonight is my favourite night of the month. It's Singles Night! #{"name": "fenrir", "mood": "excited", "background": "moonshot-main"}
 
-I like to think of myself, indeed of my café, as a force majeure of matchmaking. I just love seeing you lovely celestials hitting it off. It sets my heart alight! #{"name": "fenrir", "mood": "love", "background": "moonshot-main"}
+I like to think of myself, indeed of my café, as a force majeure of matchmaking. I just love seeing you lovely celestials hitting it off. It sets my heart alight! #{"name": "fenrir", "mood": "excited", "background": "moonshot-main"}
 
-More than a few stars have met their matches here. Some really big names. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
+More than a few stars have met their matches here. Some really big names. #{"name": "fenrir", "mood": "attention", "background": "moonshot-main"}
 
 But I digress! Tonight isn't about them, or me. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
 It's about you. I am here to help you find true love! #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
-But really it's down to you. #{"name": "fenrir", "mood": "wink", "background": "moonshot-main"}
+But really it's down to you. #{"name": "fenrir", "mood": "wink2", "background": "moonshot-main"}
 
 -> rules
 
 
 === rules ===
 
-Here's how this works. Pay close attention now! #{"name": "fenrir", "mood": "listen", "background": "moonshot-main"}
+Here's how this works. Pay close attention now! #{"name": "fenrir", "mood": "attention", "background": "moonshot-main"}
 
 There will be three speed dating rounds. You'll be paired with three celestials. You'll have a few minutes to chat to each one. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
 At the end of the night you'll find out who you hit it off with. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
 
-You can then choose one of those lucky celestial bodies to go on a date with! #{"name": "fenrir", "mood": "joy", "background": "moonshot-main"}
+You can then choose one of those lucky celestial bodies to go on a date with! #{"name": "fenrir", "mood": "excited", "background": "moonshot-main"}
 
 
-Of course, you don't have to choose any of them if you don't want to. Single life is a beautiful thing. #{"name": "fenrir", "mood": "wink", "background": "moonshot-main"}
+Of course, you don't have to choose any of them if you don't want to. Single life is a beautiful thing. #{"name": "fenrir", "mood": "wink1", "background": "moonshot-main"}
 
-Did you get all that? Or would you like me to explain the rules again? #{"name": "fenrir", "mood": "listen", "background": "moonshot-main"}
+Did you get all that? Or would you like me to explain the rules again? #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
 +   [Explain the rules again]
 
@@ -80,7 +80,7 @@ Did you get all that? Or would you like me to explain the rules again? #{"name":
 
 Excellent! I'll take your orders, then we'll make a start. #{"name": "fenrir", "mood": "neutral", "background": "moonshot-main"}
 
-Good luck! #{"name": "fenrir", "mood": "wink", "background": "moonshot-main"}
+Good luck! #{"name": "fenrir", "mood": "wink2", "background": "moonshot-main"}
 
 -> END
 
