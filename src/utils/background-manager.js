@@ -7,7 +7,7 @@ export default class BackgroundManager {
   }
 
   update({ background }) {
-    this.backgrounds.forEach((backgroundObject) => {
+    background && this.backgrounds.forEach((backgroundObject) => {
       const action = backgroundObject.name === background ? 'show' : 'hide';
       backgroundObject.update(action);
     });
