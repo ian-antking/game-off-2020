@@ -6,6 +6,8 @@ export default class StoryText extends Phaser.GameObjects.Text {
     this.scene = scene;
 
     this.scene.add.existing(this);
+
+    this.scene.events.on('SkipText', this.handleSkipText, this);
   }
 
   _animateText(text) {
@@ -37,11 +39,18 @@ export default class StoryText extends Phaser.GameObjects.Text {
     this.visible = false;
   }
 
+  handleSkipText() {
+    this.timedEvent && this.timedEvent.remove();
+    this.update(this.currentText);
+    this.scene.events.emit('TextUpdated');
+  }
+
   update(text, animated = false) {
+    this.currentText = text;
     if (animated) {
-      this._animateText(text);
+      this._animateText(this.currentText);
     } else {
-      this.setText(text);
+      this.setText(this.currentText);
     }
   }
 
