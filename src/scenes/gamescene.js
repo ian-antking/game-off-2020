@@ -1,57 +1,50 @@
 import Phaser from 'phaser';
 import { Story } from 'inkjs';
-import Character from '../sprites/character';
-import characters from '../config/characters';
-import backgrounds from '../config/backgrounds';
-import BackgroundManager from '../utils/background-manager';
+import dialogues from '../config/dialogues';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
     super('Game');
   }
 
+  init() {
+    this.dialogueIndex = 0;
+  }
+
   create() {
-    this.dialogue = this.cache.json.get('00-intro');
-    this.story = new Story(this.dialogue);
-
-    this.backgroundManager = new BackgroundManager({ 
-      scene: this,
-      backgroundNames: backgrounds
-    });
-
-    this.characters = characters.map(({ name }) => new Character({
-      name,
-      scene: this,
-      x: this.scale.width * 0.7,
-      y: this.scale.height/2,
-    }));
-
+    this.buildDialogue();
+    this.scene.launch('Dialogue');
     this.scene.launch('UI');
+    this.scene.swapPosition('UI', 'Dialogue');
   }
 
   continueStory() {
-    this.currentChoices = this.story.currentChoices;
     this.currentText = this.story.canContinue ? this.story.Continue() : this.currentText;
+    this.currentChoices = this.story.currentChoices;
     this.currentTags = this.story.currentTags;
-
-    try {
-      this.currentStoryData = JSON.parse(this.currentTags);
-    } catch (error) {
-      console.warn({ message: error.message, text: this.currentText, tags: this.currentTags });
-      this.currentStoryData = {};
+    if(!this.story.canContinue && !this.currentChoices.length) {
+      this.dialogueIndex += 1;
+      this.buildDialogue();
+    } else {
+      try {
+        this.currentStoryData = JSON.parse(this.currentTags);
+      } catch (error) {
+        console.warn({ message: error.message, text: this.currentText, tags: this.currentTags });
+        this.currentStoryData = {};
+      }
+  
+      this.events.emit('UpdateText', {
+        text: this.currentText,
+        data: this.currentStoryData,
+        choices: this.currentChoices
+      });
     }
+  }
 
-    this.events.emit('UpdateText', {
-      text: this.currentText,
-      data: this.currentStoryData,
-      choices: this.currentChoices
-    });
-
-    this.backgroundManager.update(this.currentStoryData);
-
-    this.characters.forEach((character) => {
-      character.update(this.currentStoryData);
-    });
+  buildDialogue() {
+    this.dialogueName = dialogues[this.dialogueIndex];
+    this.dialogue = this.cache.json.get(this.dialogueName);
+    this.story = new Story(this.dialogue);
   }
 
   handleChoice(choiceIndex) {

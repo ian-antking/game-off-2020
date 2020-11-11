@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import WebFontFile from '../utils/web-font-file';
 import characters from '../config/characters';
 import backgrounds from '../config/backgrounds';
+import dialogues from '../config/dialogues';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -88,11 +89,11 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('logo', 'assets/logo.png');
     this.load.image('continue-button', 'assets/continue-button.png');
 
-    //cutscenes
+    //backgrounds
     backgrounds.forEach((background) => this.loadBackground(background));
 
     //dialogues
-    this.load.json('00-intro', 'dialogue/00-intro.json');
+    dialogues.forEach((dialogueName) => this.loadDialogue(dialogueName));
 
     //characters
     characters.forEach((character) => this.loadCharacterData(character));
@@ -102,6 +103,10 @@ export default class PreloaderScene extends Phaser.Scene {
 
   loadBackground(background) {
     this.load.image(background, `assets/backgrounds/${background}.png`);
+  }
+
+  loadDialogue(dialogueName) {
+    this.load.json(dialogueName, `dialogue/${dialogueName}.json`);
   }
 
   loadCharacterData({ name, moods }) {
