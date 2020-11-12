@@ -12,8 +12,10 @@ export default class CharacterManager {
   }
 
   update(data) {
-    this.characters.forEach((character) => {
-      character.update(data);
-    });
+    this.characters.forEach((character) => character.update(data));
+  }
+
+  hideCharacters() {
+    this.characters.forEach((character) => character.hide());
   }
 }
