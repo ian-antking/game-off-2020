@@ -54,7 +54,6 @@ export default class SplashScene extends Phaser.Scene {
   wait(_, progress) {
     if (progress === 1) {
       this.time.addEvent({delay: 2000, callback: this.fadeOut, callbackScope: this});
-      this.fadeOut();
     }
   }
 
