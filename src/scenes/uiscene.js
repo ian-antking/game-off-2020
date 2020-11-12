@@ -63,7 +63,7 @@ export default class UiScene extends Phaser.Scene {
       !this.continueButton.visible && this.events.emit('SkipText');
     });
 
-    this.input.on('pointerdown', (event, [continueButton]) => {
+    this.input.on('pointerdown', (_, [continueButton]) => {
       !continueButton && this.events.emit('SkipText');
     });
 
