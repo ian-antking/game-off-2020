@@ -20,11 +20,15 @@ export default class UiScene extends Phaser.Scene {
 
   handleContinueClick() {
     this.continueButton.hide();
-    this.gameScene.continueStory();
+    this.gameScene.handleContinueClick('continueStory');
+  }
+
+  handleDialogueEnd() {
+    this.continueButton.hide();
   }
 
   textUpdated() {
-    !this.gameScene.currentChoices.length && this.continueButton.show();
+    !this.gameScene.story.currentChoices.length && this.continueButton.show();
   }
 
   init() {
@@ -32,6 +36,7 @@ export default class UiScene extends Phaser.Scene {
   }
 
   create() {
+    this.scene.bringToTop('UI');
     this.grid = new AlignGrid({ scene: this, rows:13, columns:11 });
 
     this.bar = this.add.rectangle(
@@ -56,6 +61,7 @@ export default class UiScene extends Phaser.Scene {
     this.grid.placeAt( 5, 10, this.bar);
 
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
+    this.gameScene.events.on('DialogueEnd', this.handleDialogueEnd, this);
     this.events.on('TextUpdated', this.textUpdated, this);
     this.events.on('ContinueClick', this.handleContinueClick, this);
 

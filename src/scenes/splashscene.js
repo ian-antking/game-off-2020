@@ -35,25 +35,18 @@ export default class SplashScene extends Phaser.Scene {
     this.chapterText.update(`Chapter ${chapterNumber}`);
     this.titleText.update(title);
   }
-
-  fadeOut() {
-    this.cameras.main.fadeOut(2000, 0, 0, 0, this.exitSplashScreen, this);
-  }
-
+  
   fadeIn() {
     this.cameras.main.fadeIn(2000, 0, 0, 0, this.wait, this);
   }
 
-
-  exitSplashScreen(_, progress) {
-    if (progress === 1) {
-      this.gameScene.continueStory();
-    }
+  exitSplashScreen() {
+    this.gameScene.continueStory();
   }
   
   wait(_, progress) {
     if (progress === 1) {
-      this.time.addEvent({delay: 2000, callback: this.fadeOut, callbackScope: this});
+      this.time.addEvent({delay: 2000, callback: this.exitSplashScreen, callbackScope: this});
     }
   }
 
