@@ -17,6 +17,7 @@ export default class GameScene extends Phaser.Scene {
 
   continueStory() {
     if(this.story.chapterEnd) {
+      this.updateText({text: '', data: {}, choices: []});
       this.story.nextChapter();
       this.handleNewChapter();
     } else {

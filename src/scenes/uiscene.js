@@ -9,7 +9,7 @@ export default class UiScene extends Phaser.Scene {
   }
 
   onUpdateText(data) {
-    this.bar.visible = data.data.hide ? false : true;
+    this.bar.visible = data.text ? true : false;
     this.uiBar.update(data);
   }
 
