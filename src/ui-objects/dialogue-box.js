@@ -40,6 +40,6 @@ export default class DialogueBox extends Column {
       this.dialogue.show();
     }
     this.dialogue.update(text, !!text);
-    data.name && this.nameTag.update(`${data.name}:`);
+    data.name ? this.nameTag.update(`${data.name}:`) : this.nameTag.update('');
   }
 }
