@@ -17,17 +17,25 @@ export default class Character extends Phaser.GameObjects.Sprite {
       this.setTexture(this.textureKey);
     }
     if (this.name === name) {
-      this.scene.tweens.add({
-        targets: this,
-        duration: 500,
-        alpha: 1
-      });
+      this.show();
     } else {
-      this.scene.tweens.add({
-        targets: this,
-        duration: 500,
-        alpha: 0
-      }); 
+      this.hide();
     }
+  }
+
+  show() {
+    this.scene.tweens.add({
+      targets: this,
+      duration: 500,
+      alpha: 1
+    });
+  }
+
+  hide() {
+    this.scene.tweens.add({
+      targets: this,
+      duration: 500,
+      alpha: 0
+    }); 
   }
 }

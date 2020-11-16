@@ -12,4 +12,8 @@ export default class BackgroundManager {
       backgroundObject.update(action);
     });
   }
+
+  hideBackgrounds() {
+    this.backgrounds.forEach((background) => background.hide());
+  }
 }

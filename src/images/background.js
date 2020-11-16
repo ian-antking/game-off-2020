@@ -24,7 +24,7 @@ export default class Background extends Phaser.GameObjects.Image {
   hide() {
     this.scene.tweens.add({
       targets: this,
-      duration: 750,
+      duration: 500,
       alpha: 0
     });
   }

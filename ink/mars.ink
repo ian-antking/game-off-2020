@@ -41,7 +41,7 @@ Heh, hello!   #{"name": "mars", "mood": "pleased" "affinity": 3}
 
 === mars_3 ===
 
-I'm... okay, I guess. I've never done one of these before... #{"name": "mars", "mood": "submisive" "affinity": 1}
+I'm... okay, I guess. I've never done one of these before... #{"name": "mars", "mood": "submisive", "affinity": 1}
 
 *   [I can tell.] -> mars_5
 *   [Me neither.] -> mars_6
@@ -174,7 +174,7 @@ Like, for me, swords represent these stories. I have replica samurai swords, thi
 
 === swords_6 ===
 
-I guess swords kinda represent historic struggles. And, like, it totally sucks that there is conflict, and most conflict is bad. I don't genuinely think war is heroic or whatever, But I guess swords kinda represent those people who tried to make the world better in a way. To overcome bad stuff. #{"name": "mars", "mood": "submisive" "affinity": 3}
+I guess swords kinda represent historic struggles. And, like, it totally sucks that there is conflict, and most conflict is bad. I don't genuinely think war is heroic or whatever, But I guess swords kinda represent those people who tried to make the world better in a way. To overcome bad stuff. #{"name": "mars", "mood": "submisive", "affinity": 3}
 
 For me, at least. #{"name": "mars", "mood": "excited"}
 
@@ -371,7 +371,7 @@ Say, uh... wana watch it with me sometime? #{"name": "mars", "mood": "submissive
 
 === cartoons_8 ===
 
-Heh, awesome. #{"name": "mars", "mood": "pleased" "affinity": 3}
+Heh, awesome. #{"name": "mars", "mood": "pleased", "affinity": 3}
 
 Say, uh... If you like the show... #{"name": "mars", "mood": "defensive"}
 
@@ -418,11 +418,11 @@ Sure.  #{"name": "mars", "mood": "tortured", "affinity": -30}
 
 Mars left. He looked dejected.
 
-Hello! #{"name": "fenrir", "mood": "excited"}
+Hello! #{"name": "Fenrir", "mood": "excited"}
 
-Oh. You're sitting alone. Did your partner go somewhere? #{"name": "fenrir", "mood": "neutral"}
+Oh. You're sitting alone. Did your partner go somewhere? #{"name": "Fenrir", "mood": "neutral"}
 
-This round's almost over. Now might be a good time to top up your drink. #{"name": "fenrir", "mood": "attention"} 
+This round's almost over. Now might be a good time to top up your drink. #{"name": "Fenrir", "mood": "attention"} 
 
 -> END
 
@@ -432,11 +432,11 @@ Sure.  #{"name": "mars", "mood": "tortured", "affinity": -30}
 
 Mars left.
 
-Hello! #{"name": "fenrir", "mood": "excited"}
+Hello! #{"name": "Fenrir", "mood": "excited"}
 
-Oh. You're sitting alone. Did your partner go somewhere? #{"name": "fenrir", "mood": "neutral"}
+Oh. You're sitting alone. Did your partner go somewhere? #{"name": "Fenrir", "mood": "neutral"}
 
-This round's almost over. Now might be a good time to top up your drink. #{"name": "fenrir", "mood": "attention"} 
+This round's almost over. Now might be a good time to top up your drink. #{"name": "Fenrir", "mood": "attention"} 
 
 -> END
 
@@ -450,17 +450,17 @@ I mean... #{"name": "mars", "mood": "defensive"}
 
 Mars left. Can you blame him?
 
-Oh. Oh my. He did NOT looky happy...  #{"name": "fenrir", "mood": "neutral"}
+Oh. Oh my. He did NOT looky happy...  #{"name": "Fenrir", "mood": "neutral"}
 
-Oh well. You can't win them all, am I right?  #{"name": "fenrir", "mood": "neutral"}
+Oh well. You can't win them all, am I right?  #{"name": "Fenrir", "mood": "neutral"}
 
-We'll take a short break now. #{"name": "fenrir", "mood": "neutral"}
+We'll take a short break now. #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
 === mars_end_3 ===
 
-Nice! #{"name": "mars", "mood": "excited" "affinity": 30}
+Nice! #{"name": "mars", "mood": "excited", "affinity": 30}
 
 Oh man, that's really great. #{"name": "mars", "mood": "pleased"}
 
@@ -468,13 +468,13 @@ Uh, I guess this round's nearly over. I'll look out for you at the end okay? #{"
 
 See ya later Moon! #{"name": "mars", "mood": "pleased"}
 
-Mars left with a grin on his face.
+Mars left with a grin on his face. #{}
 
-Well, he certainly looked happy! #{"name": "fenrir", "mood": "neutral"}
+Well, he certainly looked happy! #{"name": "Fenrir", "mood": "neutral"}
 
-I think someone's made a new friend! #{"name": "fenrir", "mood": "wink2"}
+I think someone's made a new friend! #{"name": "Fenrir", "mood": "wink2"}
 
-We'll take a short break now. Why not get another drink? #{"name": "fenrir", "mood": "neutral"}
+We'll take a short break now. Why not get another drink? #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
@@ -486,9 +486,9 @@ See ya Moon. #{"name": "mars", "mood": "defensive"}
 
 Mars left.
 
-Hello! #{"name": "fenrir", "mood": "excited"}
+Hello! #{"name": "Fenrir", "mood": "excited"}
 
-You two finished at just the right time. This round's almost over. #{"name": "fenrir", "mood": "neutral"}
+You two finished at just the right time. This round's almost over. #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
@@ -502,9 +502,9 @@ I might be around at the end if you change your mind. But, uh... yeah. See you a
 
 Mars left.
 
-Hello! #{"name": "fenrir", "mood": "excited"}
+Hello! #{"name": "Fenrir", "mood": "excited"}
 
-You two finished at just the right time. This round's almost over. #{"name": "fenrir", "mood": "neutral"}
+You two finished at just the right time. This round's almost over. #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
@@ -524,11 +524,11 @@ See ya later Moon! #{"name": "mars", "mood": "pleased"}
 
 Mars left with a smile on his face.
 
-Well, he certainly looked happy! #{"name": "fenrir", "mood": "neutral"}
+Well, he certainly looked happy! #{"name": "Fenrir", "mood": "neutral"}
 
-I think someone's made a new friend! #{"name": "fenrir", "mood": "wink2"}
+I think someone's made a new friend! #{"name": "Fenrir", "mood": "wink2"}
 
-We'll take a short break now. Why not get another drink? #{"name": "fenrir", "mood": "neutral"}
+We'll take a short break now. Why not get another drink? #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
@@ -538,11 +538,11 @@ We'll take a short break now. Why not get another drink? #{"name": "fenrir", "mo
 
 Mars left suddenly. He looked horrifically embarassed.
 
-Oh. Oh my. He did NOT looky happy...  #{"name": "fenrir", "mood": "neutral"}
+Oh. Oh my. He did NOT looky happy...  #{"name": "Fenrir", "mood": "neutral"}
 
-Oh well. You can't win them all, am I right?  #{"name": "fenrir", "mood": "neutral"}
+Oh well. You can't win them all, am I right?  #{"name": "Fenrir", "mood": "neutral"}
 
-We'll take a short break now. #{"name": "fenrir", "mood": "neutral"}
+We'll take a short break now. #{"name": "Fenrir", "mood": "neutral"}
 
 -> END
 
@@ -552,11 +552,11 @@ I... I need to go... #{"name": "mars", "mood": "standing" "affinity": -30}
 
 Mars gets up awkwardly and walks away. I guess the date's over...
 
-Hello! Hasn't your date turned up yet?  #{"name": "fenrir", "mood": "wave"}
+Hello! Hasn't your date turned up yet?  #{"name": "Fenrir", "mood": "wave"}
 
-What's that? He already left? #{"name": "fenrir", "mood": "neutral"}
+What's that? He already left? #{"name": "Fenrir", "mood": "neutral"}
 
-Oh! Oh dear. Well. Never mind. There's always next time, right? #{"name": "fenrir", "mood": "wink1"}
+Oh! Oh dear. Well. Never mind. There's always next time, right? #{"name": "Fenrir", "mood": "wink1"}
 
 -> END
 

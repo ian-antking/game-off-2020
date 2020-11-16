@@ -1,9 +1,6 @@
 import Phaser from 'phaser';
-import { Story } from 'inkjs';
-import Character from '../sprites/character';
-import characters from '../config/characters';
-import backgrounds from '../config/backgrounds';
-import BackgroundManager from '../utils/background-manager';
+import StoryManager from '../utils/story-manager';
+import dialogues from '../config/dialogues';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -11,51 +8,37 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.dialogue = this.cache.json.get('00-intro');
-    this.story = new Story(this.dialogue);
+    this.story = new StoryManager({ scene: this, chapters: dialogues });
 
-    this.backgroundManager = new BackgroundManager({ 
-      scene: this,
-      backgroundNames: backgrounds
-    });
-
-    this.characters = characters.map(({ name }) => new Character({
-      name,
-      scene: this,
-      x: this.scale.width * 0.7,
-      y: this.scale.height/2,
-    }));
-
+    this.scene.launch('Splash');
+    this.scene.launch('Dialogue');
     this.scene.launch('UI');
   }
 
   continueStory() {
-    this.currentChoices = this.story.currentChoices;
-    this.currentText = this.story.canContinue ? this.story.Continue() : this.currentText;
-    this.currentTags = this.story.currentTags;
-
-    try {
-      this.currentStoryData = JSON.parse(this.currentTags);
-    } catch (error) {
-      console.warn({ message: error.message, text: this.currentText, tags: this.currentTags });
-      this.currentStoryData = {};
+    if(this.story.chapterEnd) {
+      this.updateText({text: '', data: {}, choices: []});
+      this.story.nextChapter();
+      this.handleNewChapter();
+    } else {
+      this.updateText(this.story.update());
     }
+  }
 
-    this.events.emit('UpdateText', {
-      text: this.currentText,
-      data: this.currentStoryData,
-      choices: this.currentChoices
-    });
+  handleContinueClick(action) {
+    this[action]();
+  }
 
-    this.backgroundManager.update(this.currentStoryData);
+  handleNewChapter() {
+    this.events.emit('DialogueEnd', this.story.currentChapter);
+  }
 
-    this.characters.forEach((character) => {
-      character.update(this.currentStoryData);
-    });
+  updateText(storyData) {
+    this.events.emit('UpdateText', storyData);
   }
 
   handleChoice(choiceIndex) {
-    this.story.ChooseChoiceIndex(choiceIndex);
+    this.story.handleChoice(choiceIndex);
     this.continueStory();
   }
 }

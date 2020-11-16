@@ -39,7 +39,7 @@ export default class DialogueBox extends Column {
     } else {
       this.dialogue.show();
     }
-    this.dialogue.update(text, true);
-    data.name && this.nameTag.update(`${data.name}:`);
+    this.dialogue.update(text, !!text);
+    data.name ? this.nameTag.update(`${data.name}:`) : this.nameTag.update('');
   }
 }
