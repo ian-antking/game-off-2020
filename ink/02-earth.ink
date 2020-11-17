@@ -124,29 +124,37 @@ It was just too exciting. The children kept growing and learning and changing, a
 
 === earth_9
 ... Seriously? That's it? #{"name": "earth, "mood": "incredulous "}
-You walked out on us because you needed a change? #{"name": "earth, "mood": "incredulous "}
-You could have said something! #{"name": "earth, "mood": "1palmup"}
+You walked out on us because you needed a change? You could at least have said something! #{"name": "earth, "mood": "1palmup"}
 
 
+*   [You would have tried to make me stay.] -> earth_17
+*   ["Us"? Who's "us"?] -> earth_10
+
+=== earth_17
+
+Maybe. Would that have been so bad? #{"name": "earth, "mood": "1palmup"}
+
+Was staying with us really that hard for you? #{"name": "earth, "mood": "1palmup"}
+
+Was there really nothing that would have made you want to stay? Nothing I could have changed? #{"name": "earth, "mood": "1palmup"}
+
+TODO: Complete
 
 === earth_10
 
-Yes, us. Your family. Me and the children.
+Yes, us. Your family. Me and the children; all of the living beings on my surface. 
 
-They've been lost without you Moon.
+We've been lost without you Moon.
 
 The nights are darker. The tides don't work. And the sea turtles...
 
 Well, maybe you don't want to know what happened to the sea turtles.  #{"name": "earth", "mood": "sad"}
 
-* [I'm sorry. I didn't think...] -> earth_11
+//* [I'm sorry. I didn't think...] -> earth_11
 * [They aren't my children. They're your children.] -> earth_12
 * [They aren't children. They're parasites.] -> earth_13
 
-=== earth_11
-
-TODO: complete
--> END
+//=== earth_11
 
 === earth_12
 I... I didn't know you felt that way.
@@ -175,8 +183,11 @@ Even if I can't be your partner I... I really hope we can come to be friends.
 
 Maybe we could start right now. We're both here. We have good coffee. And I have so much to tell you!
 
+Whaddyasay? Should we just, you know, talk a while?
 
-TODO: Continue
+* [Sure.] -> earth_b
+* [No.] -> earth_end_2
+
 -> END
 
 === earth_13
@@ -185,22 +196,45 @@ What?! How can you say that?!
 
 They're literally tiny pockets of the universe observing itself. They're practically divine!
 
-* [...] 
-* [That's hippie nonsense]
+* [...] -> earth_14
+* [That's hippie nonsense] -> earth_14
 * [Ew! One just landed on me!] -> earth_15
+
+=== earth_14
+
+Okay, okay. We have fundamentally different views about life. #{"name": "earth", "mood": "1palmup"}
+
+I can respect that. We don't have to agree on everything. #{"name": "earth", "mood": "1palmup"}
+
+But if we can I'd really like to try and repair this bridge. #{"name": "earth", "mood": "1palmup"}
+
+Things can't go back to how they were. Maybe that's a good thing. Maybe we can find a new way to get along. #{"name": "earth", "mood": "1palmup"}
+
+I miss you Moon. I want you back in my world. As a friend if nothing else. #{"name": "earth", "mood": "1palmup"}
+
+But only if you want that too. #{"name": "earth", "mood": "1palmup"}
+
+Whaddyasay? We're both here, we have good coffee. And I have so much to tell you about. Can we just talk a while? #{"name": "earth", "mood": "1palmup"}
+
+* [Sure.] -> earth_b
+* [No.] -> earth_end_2
 
 === earth_15
 
-I won't apologise for our children's natural tendency to explore other celestial bodies.  #{"name": "earth", "mood": "uppity"}
+I won't apologise for our children's natural tendency to investigate other celestial bodies.  #{"name": "earth", "mood": "uppity"}
 
-They need to explore and grow. #{"name": "earth", "mood": "uppity"}
+They need to explore. They need to grow and learn to be self sufficient. #{"name": "earth", "mood": "uppity"}
 
 I won't be here to look after them forever. And you certainly won't. #{"name": "earth", "mood": "1palmup"}
 
 -> earth_end_1
 
-=== earth_end_1
+=== earth_b
 
+-> END
+
+
+=== earth_end_1
 Man, I really thought we could make something better of this. Make amends, maybe even be friends. But I guess not.  #{"name": "earth", "mood": "2palmsup"}
 
 Hello my lovelies! How is your little exchange going? Are we hitting it off?  #{"name": "fenrir", "mood": "neutral"}
@@ -217,7 +251,56 @@ Earth left. I guess that's that.
 
 -> END
 
+=== earth_end_2
 
+\*sigh...* #{"name": "earth", "mood": "sad"}
+
+Okay. I...  #{"name": "earth", "mood": "1palmup"}
+
+I'm glad that I got to see you at least. #{"name": "earth", "mood": "sincere"}
+
+I'm glad I got some insight into why you left.   #{"name": "earth", "mood": "sincere"}
+
+And I'm glad to know that you're moving on. Because it means that I can too.  #{"name": "earth", "mood": "2palmsup"}
+
+Thank you for that. #{"name": "earth", "mood": "sincere"}
+
+I'll see you around Moon.  #{"name": "earth", "mood": "sincere"}
+
+* Yeah. You take care. -> earth_end_2a
+* Yeah. See you around. -> earth_end_2b
+* No. You won't. -> earth_end_2c
+
+=== earth_end_2a
+
+Thanks Moon. You too. #{"name": "earth", "mood": "sincere"}
+
+Earth left.
+
+-> earth_end_2d
+
+=== earth_end_2b
+
+Sure. #{"name": "earth", "mood": "embarassed"}
+
+Earth left.
+
+-> earth_end_2d
+
+=== earth_end_2c
+
+... #{"name": "earth", "mood": "dejected"}
+
+Earth left.
+
+-> earth_end_2d
+
+=== earth_end_2d
+Hello Moon, my dear!  #{"name": "fenrir", "mood": "neutral"}
+I thought I'd wait for you two to finish your conversation before coming over. I'm sure you had a lot to talk about. #{"name": "fenrir", "mood": "neutral"}
+This round is now over. I'll take your drink order, then we'll proceed. #{"name": "fenrir", "mood": "neutral"}
+
+-> END
 
 
 
