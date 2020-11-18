@@ -266,7 +266,8 @@ What do you want to talk about? -> earth_b_routes
 * [What's that thing in your orbit?] -> earth_b1
 * [How are the kids?] -> earth_b2
 * [What DID happen to the sea turtles?] -> earth_b3
-* [Where do we go from here?] -> earth_b4
+* { earth_b1 || earth_b2 || earth_b3 } [Where do we go from here?] -> earth_b4
+* { earth_b4 } [I think that's enough for now.] -> earth_end_3
 
 === earth_b1
  Oh! Uh, the kids made it. Do you like it? #{"name": "earth", "mood": "embarassed"}
@@ -321,13 +322,13 @@ Anything else you want to talk about?
 
 They're okay now. But you leaving really shook them. 
 
-Figuratively and literally. Earth quakes, tidal waves, that sort of thing.
+Figuratively and literally. Earthquakes, tidal waves, that sort of thing.
 
 It took them a century or so to adjust. And even then it left a big mark.
 
 But you know the kids. They're robust as heck.
 
-They've cleaned up their act a lot. I guess they're getting past their adolescent stage.
+They've actually cleaned up their act a lot. I guess they're getting past their adolescent stage.
 
 They have a lot more respoect for me than they used to. I guess I've mellowed out too.
 
@@ -338,6 +339,148 @@ I'm sure they'll do great though.
 Anything else you want to talk about?
 
 -> earth_b_routes
+
+=== earth_b3
+
+Are you sure you want to know?
+
+* [Yes.] -> earth_b3_continued
+* [No.] -> earth_b3_concluded
+
+=== earth_b3_concluded
+
+Okay. We can talk about it another time if you like. #{"name": "earth", "mood": "1palmup"}
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+
+=== earth_b3_continued
+
+Well.. #{"name": "earth", "mood": "1palmup"}
+
+They... they just stopped reproducing. #{"name": "earth", "mood": "sad"}
+
+They outright stopped. No more baby turtles. #{"name": "earth", "mood": "sad"}
+
+Y'see when baby sea turtles were born they would head out to see.  #{"name": "earth", "mood": "1palmup"}
+
+Once they reached adulthood, about a decade later, they used to come back to the beach where they were born to mate. #{"name": "earth", "mood": "1palmup"}
+
+They could read the tides. They'd only come up onto land when there was a high tide. #{"name": "earth", "mood": "1palmup"}
+
+After you left there weren't any tides. So there weren't any new baby turtles. #{"name": "earth", "mood": "eyesclosed"}
+ 
+And it wasn't just the turtles. A lot of oceanic species depended on the tides to survive. #{"name": "earth", "mood": "2palmsup"}
+
+The kids tried to save them. Tried to simulate their breeding environments. Tried artificial insemination. Nothing worked. #{"name": "earth", "mood": "eyesclosed"}
+
+They even tried to generate artificial tides. Eventually they managed... #{"name": "earth", "mood": "2palmsup"}
+
+Sea turtles can live as long as 100 years. It took three times that long for the kids to build the New Moon and finally bring the tides back. #{"name": "earth", "mood": "newmoon"}
+
+So... yeah. That was that. #{"name": "earth", "mood": "sad"}
+
+* [I'm sorry.] -> earth_b3_1
+* [I didn't know.] -> earth_b3_2
+* [Are you trying to make me feel bad?] -> earth_b3_3
+
+=== earth_b3_1
+
+Me too. 
+
+I know you didn't know what would happen whe you left.
+
+You've never been a callous Celestial.
+
+I'm more stable now, thanks to the kids' help. Different. In good ways, think.
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+
+=== earth_b3_2
+
+I believe you. You've never been a callous Celestial.
+
+But... if you'd talked to me, given us some warming, maybe we could have done things differently.
+
+It's done now though. Not much point dwelling on it.
+
+Anyway, I'm more stable now, thanks to the kids' help. Different. In good ways, think.
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+
+=== earth_b3_3
+
+No. I'm just answering your question.
+
+I know it's a hard truth.
+
+But, well, leaving your family without saying anything has an impact.
+
+It's done now though. Not much point dwelling on it.
+
+Anyway, I'm more stable now, thanks to the kids' help. Different. In good ways, think.
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+ 
+=== earth_b4
+
+That's up to you.
+
+It's taken me a long time to get over you Moon.
+
+Honestly, i don't think I'll ever be fully over you.
+
+But I don't want to trap you in my orbit again. 
+
+You had reasons for leaving. If those reasons still apply then I don't think we should be together.
+
+I think we need a new dynamic if we're going to make this work. If that's what you want, that is.
+
+I have a New Moon now. The kids aren't dependant on you anymore. 
+
+Heck, if they decide to move out maybe they won't be dependant on ME anymore. 
+
+That means we can have a totally different relationship. 
+
+We could be friends. We could be co-orbitals. We could even collide and become a whole new Celestial. 
+
+But not yet. It'll be a while before I'm ready for that.
+
+I guess a good start would be seeing you again.
+
+So.. yeah. I guess that's what I want. Just to see you again. And go from there.
+
+* [I want that too.] -> earth_b4_1
+* [Maybe. We'll see.] -> earth_b4_2
+* [I don't think that's a good idea.] -> earth_end_3
+
+
+
+
+=== earth_b4_1
+
+I'm really happy to hear that.
+
+I miss you Moon. As a friend and a companion. I'm really glad I got to see you again.
+
+-> earth_end_4
+
+
+
+=== earth_b4_2
+
+Sure. I don't want to push you into anything.
+
+-> earth_end_4
+
+
 
 // ENDINGS //
 
@@ -385,30 +528,75 @@ Thanks Moon. You too. #{"name": "earth", "mood": "sincere"}
 
 Earth left.
 
--> earth_end_2d
+-> earth_end_finale
 
 === earth_end_2b
 
-Sure. #{"name": "earth", "mood": "embarassed"}
+Sure. #{"name": "earth", "mood": "eyesclosed"}
 
 Earth left.
 
--> earth_end_2d
+-> earth_end_finale
 
 === earth_end_2c
 
-... #{"name": "earth", "mood": "dejected"}
+... #{"name": "earth", "mood": "sad"}
 
 Earth left.
 
--> earth_end_2d
+-> earth_end_finale
 
-=== earth_end_2d
+=== earth_end_3
+
+\*sigh...* #{"name": "earth", "mood": "sad"}
+
+Maybe you're right.  #{"name": "earth", "mood": "1palmup"}
+
+I still don't completely understand why you left, or why you want to be away from me.  #{"name": "earth", "mood": "1palmup"}
+
+But I guess I'm tired of wondering about that. #{"name": "earth", "mood": "eyesclosed"}
+
+It doesn't hurt like it used to. It's a constant ache, but... it's liveable. #{"name": "earth", "mood": "1palmup"}
+
+And the last thing I want is to pretend things are working when they aren't. That didn't go so well last time. #{"name": "earth", "mood": "1palmup"}
+
+I'm glad that I got to see you at least. #{"name": "earth", "mood": "sincere"}
+
+I'm glad I got some insight into why you left.   #{"name": "earth", "mood": "sincere"}
+
+And I'm glad to know that you're moving on. It might help me do the same.  #{"name": "earth", "mood": "2palmsup"}
+
+Thank you for that. #{"name": "earth", "mood": "sincere"}
+
+I'll see you around Moon.  #{"name": "earth", "mood": "sincere"}
+
+* Yeah. You take care. -> earth_end_2a
+* Yeah. See you around. -> earth_end_2b
+* No. You won't. -> earth_end_2c
+
+=== earth_end_4
+
+I'll be around at the end if you want to talk more. Just let me know.
+
+And if you don't want that, that's okay too. Just, please let me know.
+
+That's all I ask.
+
+I'll see you around Moon.  #{"name": "earth", "mood": "sincere"}
+
+Earth left.
+
+-> earth_end_finale
+
+
+
+=== earth_end_finale
 Hello Moon, my dear!  #{"name": "fenrir", "mood": "neutral"}
 I thought I'd wait for you two to finish your conversation before coming over. I'm sure you had a lot to talk about. #{"name": "fenrir", "mood": "neutral"}
-This round is now over. I'll take your drink order, then we'll proceed. #{"name": "fenrir", "mood": "neutral"}
+This round is over now. I'll take your drink order, then we'll proceed. #{"name": "fenrir", "mood": "neutral"}
 
 -> END
+
 
 
 
