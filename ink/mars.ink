@@ -10,13 +10,13 @@ Uh. Hey there. #{"name": "mars", "mood": "defensive"}
 
 === mars_1 ===
 
-Heh, hello!   #{"name": "mars", "mood": "pleased" "affinity": 3}
+Heh, hello!   #{"name": "mars", "mood": "pleased", "affinity": 3}
 
 -> mars_3
 
 === mars_2 ===
 
-... #{"name": "mars", "mood": "defensive" "affinity": -1}
+... #{"name": "mars", "mood": "defensive", "affinity": -1}
 
 * [ So... How are you?] -> mars_3
 * [So... What are you into?] -> swords_segue_2 //TODO: Link this
@@ -25,7 +25,7 @@ Heh, hello!   #{"name": "mars", "mood": "pleased" "affinity": 3}
 
 === mars_torture_1 ===
 
-... #{"name": "mars", "mood": "defensive" "affinity": -1}
+... #{"name": "mars", "mood": "defensive", "affinity": -1}
 
 * [ So... How are you?] -> mars_3
 * [So... What are you into?] -> swords_segue_2 //TODO: Link this
@@ -33,7 +33,7 @@ Heh, hello!   #{"name": "mars", "mood": "pleased" "affinity": 3}
 
 === mars_torture_2 ===
 
-... #{"name": "mars", "mood": "tortured" "affinity": -1}
+... #{"name": "mars", "mood": "tortured", "affinity": -1}
 
 * [ So... How are you?] -> mars_3
 * [So... What are you into?] -> swords_segue_2 //TOSO: Link this
@@ -49,13 +49,13 @@ I'm... okay, I guess. I've never done one of these before... #{"name": "mars", "
 
 === mars_5 ===
 
-It's that obvious huh?  #{"name": "mars", "mood": "embarassed" "affinity": -2}
+It's that obvious huh?  #{"name": "mars", "mood": "embarassed", "affinity": -2}
 
 -> mars_8
 
 === mars_6 ===
 
-Heh, I'm glad it's not just me. #{"name": "mars", "mood": "smile" "affinity": 1}
+Heh, I'm glad it's not just me. #{"name": "mars", "mood": "smile", "affinity": 1}
 
 -> mars_8
 
@@ -142,7 +142,7 @@ Sorry... #{"name": "mars", "mood": "sad"}
 
 === mars_torture_5 ===
 
-... #{"name": "mars", "mood": "tortured" "affinity": -3}
+... #{"name": "mars", "mood": "tortured", "affinity": -3}
 
 * [Sorry, that was rude of me.] -> swords_7
 * [Why do you collect swords?] -> swords_5
