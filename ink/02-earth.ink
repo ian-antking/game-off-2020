@@ -101,8 +101,8 @@ Oh. Wow. #{"name": "earth", "mood": "sad"}
 
 It's that simple, huh? #{"name": "earth", "mood": "sad"}
 
-* It's that simple. -> earth_7b
-*There's something else... -> earth_7c
+* [It's that simple.] -> earth_7b
+* [There's something else...] -> earth_7c
 
 === earth_7c
 
@@ -257,7 +257,89 @@ I won't be here to look after them forever. And you certainly won't. #{"name": "
 
 === earth_b
 
--> END
+Okay! I'm so glad to hear that. #{"name": "earth", "mood": "calmsmile"}
+
+What do you want to talk about? -> earth_b_routes
+
+=== earth_b_routes
+
+* [What's that thing in your orbit?] -> earth_b1
+* [How are the kids?] -> earth_b2
+* [What DID happen to the sea turtles?] -> earth_b3
+* [Where do we go from here?] -> earth_b4
+
+=== earth_b1
+ Oh! Uh, the kids made it. Do you like it? #{"name": "earth", "mood": "embarassed"}
+ 
+ * [It's lovely] -> earth_b5
+ * [It's weird] -> earth_b6
+ * [I don't know. What is it?] -> earth_b7
+ 
+=== earth_b5
+
+Thanks!  #{"name": "earth", "mood": "grin"}
+
+-> earth_b7 
+
+=== earth_b6
+
+Heh, yeah, I guess it is.  #{"name": "earth", "mood": "embarassed"}
+
+It's unique, in fact. There's nothing else like it in the universe. #{"name": "earth", "mood": "1palmup"}
+
+-> earth_b7 
+
+=== earth_b7
+
+It's... well, it's my New Moon. #{"name": "earth", "mood": "embarassed"}
+
+The kids made it. #{"name": "earth", "mood": "1palmup"}
+
+When you left they really felt it. Emotionally AND physically. #{"name": "earth", "mood": "sad"}
+
+You have a lot of gravity Moon. Like, tidal levels of gravity. #{"name": "earth", "mood": "1palmup"}
+
+You really shone a light on them. #{"name": "earth", "mood": "1palmup"}
+
+The kids had real trouble coping without your presence, your effects.
+
+Maybe it's a bit weird but, uh they built this thing to replace you. 
+
+It's a poor substitute in my opinion.
+
+It has some kind of gravity generator in it. Even though it's a lot smaller than you it produces the same gravitational effects.
+
+It doubles up as a nightlight. The kids still hate the dark.
+
+I think it does some other stuff. I don't really get it though. You know what the kids are like, always playing with new gadgets.
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+
+=== earth_b2
+
+They're okay now. But you leaving really shook them. 
+
+Figuratively and literally. Earth quakes, tidal waves, that sort of thing.
+
+It took them a century or so to adjust. And even then it left a big mark.
+
+But you know the kids. They're robust as heck.
+
+They've cleaned up their act a lot. I guess they're getting past their adolescent stage.
+
+They have a lot more respoect for me than they used to. I guess I've mellowed out too.
+
+Recently they've been talking about moving out, checking out some other planets. Not all of them, just a few. Still, I'll miss them if they do.
+
+I'm sure they'll do great though. 
+
+Anything else you want to talk about?
+
+-> earth_b_routes
+
+// ENDINGS //
 
 
 === earth_end_1
@@ -287,7 +369,7 @@ I'm glad that I got to see you at least. #{"name": "earth", "mood": "sincere"}
 
 I'm glad I got some insight into why you left.   #{"name": "earth", "mood": "sincere"}
 
-And I'm glad to know that you're moving on. Because it means that I can too.  #{"name": "earth", "mood": "2palmsup"}
+And I'm glad to know that you're moving on. It might help me do the same.  #{"name": "earth", "mood": "2palmsup"}
 
 Thank you for that. #{"name": "earth", "mood": "sincere"}
 
