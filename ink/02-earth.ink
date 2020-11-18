@@ -8,33 +8,45 @@ Hi honey. #{"name": "earth", "mood": "awkwardgrin"}
 
 === earth_1_1 ===
  Yep. it's me. #{"name": "earth", "mood": "awkwardgrin"} 
- -> earth_2
+ -> earth_2a
 
 === earth_1_2 ===
 Yep. it's me. #{"name": "earth", "mood": "awkwardgrin"} 
--> earth_2
+-> earth_2a
 
 === earth_1_3 ===
 Oh, uh... sorry. #{"name": "earth", "mood": "sad"}
 
 I didn't know I couldn't call you that anymore. #{"name": "earth", "mood": "sad"}
--> earth_2
+-> earth_2b
 
 === earth_1_4 ===
 Eesh... #{"name": "earth", "mood": "shrink"} 
--> earth_2
+-> earth_2b
 
-=== earth_2 ===
+=== earth_2a ===
+
+* [How are you?] -> earth_6
+* [What are YOU doing here?] -> earth_3
+* [Who are you here with?] -> earth_5
+* [Did you know I'd be here?] -> earth_4
+
+=== earth_2b ===
 
 * [What are YOU doing here?] -> earth_3
 * [Did you know I'd be here?] -> earth_4
 * [Who are you here with?] -> earth_5
-* [How are you?] -> earth_6
 
 === earth_3 ===
-Same thing as you, looks like. #{"name": "earth", "mood": "1palmup"}
+Oh gee, I don't know. Trying to get over an aeons-long relationship that abruptly ended with my Moon leaving me without saying anything, maybe? Something like that? #{"name": "earth", "mood": "2palmup"}
 
-TODO: Finish this route, adjoin to earth_a
+Things have been rough since you left. Venus has been helping me out. #{"name": "earth", "mood": "1palmup"}
+
+They thought that dating might help me get out of my orbit for a while. Give me something else to think about. #{"name": "earth", "mood": "1palmup"}
+
+And it was working. Until now. #{"name": "earth", "mood": "2palmsup"} 
+
+-> earth_a
 
 
 === earth_4 ===
@@ -51,17 +63,15 @@ Venus asked me along. They've been helping me out since you left. It's been roug
 === earth_5
 That's not really your business. Not anymore. #{"name": "earth", "mood": "1palmup"}
 
-Oh, okay... I'm here with Venus. #{"name": "earth", "mood": "resigned"}
+Oh, okay... I'm here with Venus. #{"name": "earth", "mood": "1palmup"}
 
-Things have been rough since you left. Venus has been helping me out. #{"name": "earth", "mood": "resigned"}
+Things have been rough since you left. Venus has been helping me out. #{"name": "earth", "mood": "1palmup"}
 
-They thought that dating might help me get out of my orbit for a while. Give me something else to think about. #{"name": "earth", "mood": "resigned"}
+They thought that dating might help me get out of my orbit for a while. Give me something else to think about. #{"name": "earth", "mood": "1palmup"}
 
 And it was working. Until now. #{"name": "earth", "mood": "2palmsup"} 
 
 -> earth_a
-
-TODO: Needs a route.
 
 === earth_6
 I... #{"name": "earth", "mood": "lookaway"}
@@ -87,27 +97,41 @@ I still don't understand why you left us. Why did you do it Moon?
 *   ["Us"? Who's "us"?] -> earth_10
 
 === earth_7
-Oh. Wow.
+Oh. Wow. #{"name": "earth", "mood": "sad"}
 
-It's that simple, huh?
+It's that simple, huh? #{"name": "earth", "mood": "sad"}
 
-...
+* It's that simple. -> earth_7b
+*There's something else... -> earth_7c
 
-Sorry. It's a lot to take in...
+=== earth_7c
 
-Deep breaths Earth, deep breaths.
+What? What else? #{"name": "earth", "mood": "1palmup"}
 
-I... I can't deny that it hurts to hear you say that. It hurts a lot.
+*   [You didn't respect me enough.] -> earth_8
+*   [I needed a change.] -> earth_9
 
-But it's better than not knowing why you left.
+=== earth_7b
 
-... I can't hold it against you. That wouldn't be fair. You feel what you feel, know what I mean?
+... #{"name": "earth", "mood": "sad"}
 
-And I won't ask for you back. If you don't want me then there's no point.
+Wow, I... uh #{"name": "earth", "mood": "sad"}
 
-But hey, we're here to socialise right? How about we catch up? A lot's changed since you left.
+Sorry. It's a lot to take in... #{"name": "earth", "mood": "sad"}
 
-TODO: Link.
+Deep breaths Earth, deep breaths. #{"name": "earth", "mood": "eyesclosed"}
+
+... It hurts to hear you say that. It hurts a lot. #{"name": "earth", "mood": "eyesclosed"}
+
+But.. it's better than not knowing why you left. #{"name": "earth", "mood": "eyesclosed"}
+
+... I can't hold it against you. That wouldn't be fair. You feel what you feel, know what I mean? #{"name": "earth", "mood": "1palmup"}
+
+And I won't ask for you back. If you don't want me then there's no point. #{"name": "earth", "mood": "1palmup"}
+
+But I don't want to loose you Moon. You're my closest celestial. You mean the world to me, not just as a Moon but as a friend. #{"name": "earth", "mood": "2palmsup"}
+
+-> earth_18
 
 === earth_8
 I... I didn't know you felt that way.
@@ -179,16 +203,18 @@ I don't know if I can make up for that... But I'd like to try, if you would let 
 
 A lot's changed since you left. And I'm ready to do whatever I need to to repair our relationship.
 
-Even if I can't be your partner I... I really hope we can come to be friends.
+-> earth_18
 
-Maybe we could start right now. We're both here. We have good coffee. And I have so much to tell you!
+=== earth_18
 
-Whaddyasay? Should we just, you know, talk a while?
+Even if I can't be your partner I... I really hope we can come to be friends. #{"name": "earth, "mood": "1palmup"}
+
+Maybe we could start right now. We're both here. We have good coffee. And I have so much to tell you... #{"name": "earth, "mood": "embarassed"}
+
+Whaddyasay? Can we just, you know, talk a while? #{"name": "earth, "mood": "1palmup"}
 
 * [Sure.] -> earth_b
 * [No.] -> earth_end_2
-
--> END
 
 === earth_13
 
