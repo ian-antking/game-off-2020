@@ -21,7 +21,7 @@ I didn't know I couldn't call you that anymore. #{"name": "earth", "mood": "sad"
 -> earth_2b
 
 === earth_1_4 ===
-Eesh... #{"name": "earth", "mood": "shrink"} 
+Eesh... #{"name": "earth", "mood": "awkwardflat"} 
 -> earth_2b
 
 === earth_2a ===
@@ -69,18 +69,18 @@ Things have been rough since you left. Venus has been helping me out. #{"name": 
 
 They thought that dating might help me get out of my orbit for a while. Give me something else to think about. #{"name": "earth", "mood": "1palmup"}
 
-And it was working. Until now. #{"name": "earth", "mood": "2palmsup"} 
+And it was working. Until now. #{"name": "earth", "mood": "2palmup"} 
 
 -> earth_a
 
 === earth_6
-I... #{"name": "earth", "mood": "lookaway"}
+I... #{"name": "earth", "mood": "awkwardflat"}
 
 I mean, not great to be honest. #{"name": "earth", "mood": "1palmup"}
 
-I'm getting better now. But Moon, you just left. #{"name": "earth", "mood": "2palmsup"}
+I'm getting better now. But Moon, you just left. #{"name": "earth", "mood": "2palmup"}
 
-We had no idea where you were, why you'd gone... #{"name": "earth", "mood": "2palmsup"} 
+We had no idea where you were, why you'd gone... #{"name": "earth", "mood": "2palmup"} 
 
 -> earth_a
 
@@ -89,7 +89,7 @@ We had no idea where you were, why you'd gone... #{"name": "earth", "mood": "2pa
 
 === earth_a
 
-I still don't understand why you left us. Why did you do it Moon?
+I still don't understand why you left us. Why did you do it Moon? #{"name": "earth", "mood": "2palmup"} 
 
 *   [I didn't love you anymore.] -> earth_7
 *   [You didn't respect me enough.] -> earth_8
@@ -129,20 +129,21 @@ But.. it's better than not knowing why you left. #{"name": "earth", "mood": "eye
 
 And I won't ask for you back. If you don't want me then there's no point. #{"name": "earth", "mood": "1palmup"}
 
-But I don't want to loose you Moon. You're my closest celestial. You mean the world to me, not just as a Moon but as a friend. #{"name": "earth", "mood": "2palmsup"}
+But I don't want to loose you Moon. You're my closest celestial. You mean the world to me, not just as a Moon but as a friend. #{"name": "earth", "mood": "2palmup"}
 
 -> earth_18
 
 === earth_8
-I... I didn't know you felt that way.
 
-...
+I... I didn't know you felt that way.  #{"name": "earth", "mood": "awkwardflat"}
 
-No. No, that's not true. I can understand why you felt like that.
+... #{"name": "earth", "mood": "awkwardflat"}
 
-Ever since we created life together I've been completely focussed on myself.
+No. No, that's not true. I can understand why you felt like that. #{"name": "earth", "mood": "sad"}
 
-It was just too exciting. The children kept growing and learning and changing, and they kept changing me... It was addictive.
+Ever since we created life together I've been completely focussed on myself. #{"name": "earth", "mood": "sad"}
+
+It was just too exciting. The children kept growing and learning and changing, and they kept changing me... It was addictive. #{"name": "earth", "mood": "1palmup"}
 
 -> earth_16
 
@@ -158,11 +159,31 @@ You walked out on us because you needed a change? You could at least have said s
 
 Maybe. Would that have been so bad? #{"name": "earth, "mood": "1palmup"}
 
-Was staying with us really that hard for you? #{"name": "earth, "mood": "1palmup"}
+Was staying with us really that hard for you? #{"name": "earth, "mood": "2palmup"}
 
-Was there really nothing that would have made you want to stay? Nothing I could have changed? #{"name": "earth, "mood": "1palmup"}
+Was there really nothing that would have made you want to stay? Nothing I could have changed? #{"name": "earth, "mood": "2palmup"}
 
-TODO: Complete
+* [Maybe.]
+* [No. Nothing would have made me stay.] -> earth_17b
+
+=== earth_17b
+
+I see. #{"name": "earth", "mood": "sad"}
+
+But... I don't understand. #{"name": "earth", "mood": "awkwardflat"}
+
+And I don't think I can forgive you for leaving so abruptly. I don't think you realise how much damage that did. #{"name": "earth", "mood": "1palmup"}
+
+Not just to me, but to the children too. #{"name": "earth", "mood": "2palmup"}
+
+Species died after you left Moon.#{"name": "earth", "mood": "incredulous"}
+
+Whatever you needed, you could have gotten it without that sacrifice. #{"name": "earth", "mood": "2palmup"}
+
+-> earth_end_5
+
+
+TODO: Complete!!!!
 
 === earth_10
 
@@ -587,6 +608,16 @@ I'll see you around Moon.  #{"name": "earth", "mood": "sincere"}
 Earth left.
 
 -> earth_end_finale
+
+=== earth_end_5
+
+You know, when I saw you here...
+
+At first I was shocked.
+
+TODO: Finish. Earth doesn't need you anymore, or want you. Best if you don't see each other again. goodbye Moon. then to earth_end_finale.
+
+
 
 
 
