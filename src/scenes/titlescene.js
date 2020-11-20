@@ -6,7 +6,8 @@ export default class TitleScene extends Phaser.Scene {
     super('Title');
   }
 
-  preload() {
+  init(saveGame) {
+    this.saveGame = saveGame;
   }
 
   create() {
@@ -71,7 +72,7 @@ export default class TitleScene extends Phaser.Scene {
     this.titleText.setStyle({ fill: '#fff' });
   }
 
-  startGame() {
-    this.scene.start('Game');
+  startGame(saveGame) {
+    this.scene.start('Game', saveGame || null);
   }
 }

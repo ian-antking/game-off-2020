@@ -9,14 +9,15 @@ export default class PreloaderScene extends Phaser.Scene {
     super('Preloader');
   }
 
-  init() {
+  init(saveGame) {
+    this.saveGame = saveGame; 
     this.readyCount = 0;
   }
 
   ready() {
     this.readyCount += 1;
     if (this.readyCount >= 2) {
-      this.scene.start('Title');
+      this.scene.start('Title', this.saveGame);
     }
   }
 

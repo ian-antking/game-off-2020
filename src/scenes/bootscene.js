@@ -5,7 +5,11 @@ export default class BootScene extends Phaser.Scene {
     super('Boot');
   }
 
+  init() {
+    this.saveGame = localStorage.getItem('saveGame');
+  }
+
   create() {
-    this.scene.start('Preloader');
+    this.scene.start('Preloader', this.saveGame);
   }
 }
