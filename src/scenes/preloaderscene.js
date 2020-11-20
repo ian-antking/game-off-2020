@@ -88,6 +88,8 @@ export default class PreloaderScene extends Phaser.Scene {
     //images
     this.load.image('logo', 'assets/logo.png');
     this.load.image('continue-button', 'assets/continue-button.png');
+    this.load.image('ray', 'assets/ray.png');
+    this.load.image('space', 'assets/space.png');
 
     //backgrounds
     backgrounds.forEach((background) => this.loadBackground(background));
