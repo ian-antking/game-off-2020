@@ -129,7 +129,9 @@ But.. it's better than not knowing why you left. #{"name": "earth", "mood": "eye
 
 And I won't ask for you back. If you don't want me then there's no point. #{"name": "earth", "mood": "1palmup"}
 
-But I don't want to loose you Moon. You're my closest celestial. You mean the world to me, not just as a Moon but as a friend. #{"name": "earth", "mood": "2palmup"}
+But I don't want to loose you Moon. You're my closest celestial. #{"name": "earth", "mood": "2palmup"}
+
+You mean the world to me, not just as a Moon but as a friend. #{"name": "earth", "mood": "2palmup"}
 
 -> earth_18
 
@@ -143,12 +145,13 @@ No. No, that's not true. I can understand why you felt like that. #{"name": "ear
 
 Ever since we created life together I've been completely focussed on myself. #{"name": "earth", "mood": "sad"}
 
-It was just too exciting. The children kept growing and learning and changing, and they kept changing me... It was addictive. #{"name": "earth", "mood": "1palmup"}
+It was just so exciting. The children kept growing and learning and changing, and they kept changing me... It was addictive. #{"name": "earth", "mood": "1palmup"}
 
 -> earth_16
 
 === earth_9
 ... Seriously? That's it? #{"name": "earth, "mood": "incredulous "}
+
 You walked out on us because you needed a change? You could at least have said something! #{"name": "earth, "mood": "1palmup"}
 
 
@@ -163,8 +166,33 @@ Was staying with us really that hard for you? #{"name": "earth, "mood": "2palmup
 
 Was there really nothing that would have made you want to stay? Nothing I could have changed? #{"name": "earth, "mood": "2palmup"}
 
-* [Maybe.]
+* [Maybe.] -> earth_17a
 * [No. Nothing would have made me stay.] -> earth_17b
+
+
+=== earth_17a
+
+It's frustrating to hear you say that now. #{"name": "earth", "mood": "awkwardflat"}
+
+If only we'd talked Moon. If only I'd listened. #{"name": "earth", "mood": "awkwardflat"}
+
+Things could have been so much better. #{"name": "earth", "mood": "sad"}
+
+Deep breaths Earth, deep breaths. #{"name": "earth", "mood": "eyesclosed"}
+
+You know what? #{"name": "earth", "mood": "awkwardflat"}
+
+I've been looking back for so long. Thinking about what we were. #{"name": "earth", "mood": "awkwardflat"}
+
+But.. we weren't what I thought. If we were then you wouldn't have left. #{"name": "earth", "mood": "1palmup"}
+
+And since you left I've changed a lot. Like, really changed. #{"name": "earth", "mood": "1palmup"}
+
+For the better, I think. #{"name": "earth", "mood": "awkwardgrin"}
+
+Perhaps e could start fresh. Build something new, something with real communication. Something fair. #{"name": "earth", "mood": "1palmup"}
+
+-> earth_18
 
 === earth_17b
 
@@ -181,9 +209,6 @@ Species died after you left Moon.#{"name": "earth", "mood": "incredulous"}
 Whatever you needed, you could have gotten it without that sacrifice. #{"name": "earth", "mood": "2palmup"}
 
 -> earth_end_5
-
-
-TODO: Complete!!!!
 
 === earth_10
 
@@ -232,7 +257,7 @@ Even if I can't be your partner I... I really hope we can come to be friends. #{
 
 Maybe we could start right now. We're both here. We have good coffee. And I have so much to tell you... #{"name": "earth, "mood": "embarassed"}
 
-Whaddyasay? Can we just, you know, talk a while? #{"name": "earth, "mood": "1palmup"}
+What do you think? Shall we talk a while? See what comes of it? #{"name": "earth, "mood": "1palmup"}
 
 * [Sure.] -> earth_b
 * [No.] -> earth_end_2
@@ -611,19 +636,33 @@ Earth left.
 
 === earth_end_5
 
-You know, when I saw you here...
+You know, when I saw you here I didn't know what to do. I was shocked. #{"name": "earth", "mood": "awkwardflat"}
 
-At first I was shocked.
+I didn't know how you'd act. But a part of me was hoping that we could salvage something from this. #{"name": "earth", "mood": "awkwardflat"}
 
-TODO: Finish. Earth doesn't need you anymore, or want you. Best if you don't see each other again. goodbye Moon. then to earth_end_finale.
+Anything. Friendship. Acquaintence. Whatever. #{"name": "earth", "mood": "awkwardflat"}
 
+You say there's nothing I could have changed that would have made you want to stay. #{"name": "earth", "mood": "1palmup"}
+
+If there's really no way we can make something out of what we had, then... #{"name": "earth", "mood": "sincere"}
+
+Then this conversation is pointless. Sad as that is. #{"name": "earth", "mood": "sad"}
+
+I should go. #{"name": "earth", "mood": "awkwardflat"}
+
+Earth left.
+
+-> earth_end_finale
 
 
 
 
 === earth_end_finale
 Hello Moon, my dear!  #{"name": "fenrir", "mood": "neutral"}
-I thought I'd wait for you two to finish your conversation before coming over. I'm sure you had a lot to talk about. #{"name": "fenrir", "mood": "neutral"}
+I thought I'd wait for you two to finish your conversation before coming over. #{"name": "fenrir", "mood": "neutral"}
+
+Apologies for being a little personal, but it's no secret what happened between you and Earth. I'm sure you had a lot to talk about. #{"name": "fenrir", "mood": "neutral"}
+
 This round is over now. I'll take your drink order, then we'll proceed. #{"name": "fenrir", "mood": "neutral"}
 
 -> END
