@@ -1,14 +1,24 @@
 import Phaser from 'phaser';
 import StoryManager from '../utils/story-manager';
 import dialogues from '../config/dialogues';
+import SaveManager from '../utils/save-manager';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
     super('Game');
   }
 
+  init(save) {
+    this.saveData = save;
+  }
+
   create() {
-    this.story = new StoryManager({ scene: this, chapters: dialogues });
+    const { story } = this.saveData;
+    this.story = new StoryManager({
+      scene: this,
+      chapters: story?.chapters || dialogues,
+      currentChapter: story?.chapterIndex || 0
+    });
 
     this.scene.launch('Splash');
     this.scene.launch('Dialogue');
@@ -31,6 +41,13 @@ export default class GameScene extends Phaser.Scene {
 
   handleNewChapter() {
     this.events.emit('DialogueEnd', this.story.currentChapter);
+  }
+
+  save(characterData) {
+    SaveManager.saveGame({
+      story: this.story.saveData,
+      characters: characterData,
+    });
   }
 
   updateText(storyData) {

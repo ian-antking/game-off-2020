@@ -1,13 +1,14 @@
 import Phaser from 'phaser';
 import Align from '../utils/align';
+import SaveManager from '../utils/save-manager';
 
 export default class TitleScene extends Phaser.Scene {
   constructor() {
     super('Title');
   }
 
-  init(saveGame) {
-    this.saveGame = saveGame;
+  init() {
+    this.saveGame = SaveManager.loadSave();
   }
 
   create() {
@@ -45,7 +46,7 @@ export default class TitleScene extends Phaser.Scene {
     this.logo.y -= 50;
     this.logo.setScale(0.75);
 
-    this.titleText = this.make.text({
+    this.newGameText = this.make.text({
       text: 'New Game',
       style: {
         fontFamily: '"Press Start 2P"',
@@ -53,23 +54,44 @@ export default class TitleScene extends Phaser.Scene {
         fill: '#ffffff',
       },
     });
-    this.titleText
+    this.newGameText
       .setOrigin(0.5, 0.5)
       .setInteractive()
-      .on('pointerover', () => this.enterButtonHoverState())
-      .on('pointerout', () => this.enterButtonRestState())
+      .on('pointerover', () => this.enterButtonHoverState(this.newGameText))
+      .on('pointerout', () => this.enterButtonRestState(this.newGameText))
       .on('pointerdown', () => this.startGame());
 
-    Align.center(this.titleText, this);
-    this.titleText.y += 100;
+    Align.center(this.newGameText, this);
+    this.newGameText.y += 100;
+
+    if (this.saveGame) {
+      this.continueText = this.make.text({
+        text: 'Continue',
+        style: {
+          fontFamily: '"Press Start 2P"',
+          fontSixe: '20px',
+          fill: '#ffffff',
+        },
+      });
+
+      this.continueText
+        .setOrigin(0.5, 0.5)
+        .setInteractive()
+        .on('pointerover', () => this.enterButtonHoverState(this.continueText))
+        .on('pointerout', () => this.enterButtonRestState(this.continueText))
+        .on('pointerdown', () => this.startGame(this.saveGame));
+
+      Align.center(this.continueText, this);
+      this.continueText.y += 150;
+    }
   }
 
-  enterButtonHoverState() {
-    this.titleText.setStyle({ fill: '#ff0'});
+  enterButtonHoverState(button) {
+    button.setStyle({ fill: '#ff0'});
   }
 
-  enterButtonRestState() {
-    this.titleText.setStyle({ fill: '#fff' });
+  enterButtonRestState(button) {
+    button.setStyle({ fill: '#fff' });
   }
 
   startGame(saveGame) {

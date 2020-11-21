@@ -17,7 +17,7 @@ export default class DialogueScene extends Phaser.Scene {
     this.buildAssetManagers();
     this.gameScene.events.on('UpdateText', this.onUpdateText, this);
     this.gameScene.events.on('NewDialogue', this.buildAssetManagers, this);
-    this.gameScene.events.on('DialogueEnd', this.hide, this);
+    this.gameScene.events.on('DialogueEnd', this.handleDialogueEnd, this);
   }
 
   buildAssetManagers() {
@@ -30,6 +30,11 @@ export default class DialogueScene extends Phaser.Scene {
       scene: this,
       characters: characters,
     });
+  }
+
+  handleDialogueEnd() {
+    this.hide();
+    this.gameScene.save(this.characterManager.saveData);
   }
 
   hide() {

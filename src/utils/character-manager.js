@@ -11,6 +11,10 @@ export default class CharacterManager {
     }));
   }
 
+  get saveData() {
+    return this.characters.map(character => character.saveData);
+  }
+
   update(data) {
     this.characters.forEach((character) => character.update(data));
   }

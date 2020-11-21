@@ -1,6 +1,7 @@
 export default class SaveManager {
   static loadSave() {
-    return JSON.parse(localStorage.getItem('saveGame'));
+    const saveJson = localStorage.getItem('saveGame');
+    return saveJson ? JSON.parse(saveJson) : null;
   }
 
   static saveGame(data) {
