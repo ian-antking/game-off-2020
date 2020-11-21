@@ -1,8 +1,8 @@
 import { Story } from 'inkjs';
 
 export default class StoryManager {
-  constructor({ scene, chapters }) {
-    this.chapterIndex = 0;
+  constructor({ scene, chapters, currentChapter = 0 }) {
+    this.chapterIndex = currentChapter;
     this.scene = scene;
     this.chapters = chapters;
     this.buildChapter();
@@ -21,6 +21,13 @@ export default class StoryManager {
       text: this.currentText,
       data: this.currentMetaData,
       choices: this.currentChoices
+    };
+  }
+
+  get saveData() {
+    return {
+      chapterIndex: this.chapterIndex,
+      chapters: this.chapters
     };
   }
 

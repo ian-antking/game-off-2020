@@ -12,6 +12,13 @@ export default class Character extends Phaser.GameObjects.Sprite {
     this.depth=10;
   }
 
+  get saveData() {
+    return {
+      name: this.name,
+      affinity: this.affinity
+    };
+  }
+
   update({ name, mood, affinity }) {
     if (affinity) {
       this.affinity += affinity;
