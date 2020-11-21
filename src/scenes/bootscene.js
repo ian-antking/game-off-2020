@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import SaveManager from '../utils/save-manager';
 
 export default class BootScene extends Phaser.Scene {
   constructor() {
@@ -6,7 +7,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   init() {
-    this.saveGame = localStorage.getItem('saveGame');
+    this.saveGame = SaveManager.loadSave();
   }
 
   create() {
