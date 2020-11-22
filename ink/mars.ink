@@ -325,8 +325,6 @@ Heh, I nearly told ya the big reveal in season one. Sorry! I get kinda excited a
 
 * [I'd watch that.] -> cartoons_8
 * [Sounds dumb.] -> cartoons_9
-// * [So the kids are ghosts right?] -> cartoons_10
-// Leads to a convo about spoilers, then back to Mars asking if you want to watch shows with him.
 
 === cartoons_9 ===
 
