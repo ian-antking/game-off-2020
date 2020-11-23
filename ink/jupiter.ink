@@ -232,7 +232,42 @@ So, what are you here for?
 
 === J10
 
-Ah yeah, of course.
+Ah yeah, of course. It IS a date night after all. #{"name": "Juptier", "mood":"pistolfinger"}
+
+Um... I have a confession to make. #{"name": "Juptier", "mood":"grin"}
+
+Well, not really a confession. It's nothing bad. Just something I want to get out there.  #{"name": "Juptier", "mood":"1palm"}
+
+I'm not here to find a partner. Not precisely. #{"name": "Juptier", "mood":"smile"}
+
+See, I'm not against the idea of settling down with someone. Eventually. Who knows what might come in time? #{"name": "Juptier", "mood":"1palm"}
+
+And I totally want to meet new people, get to know 'em. It's why I'm here. #{"name": "Juptier", "mood":"1palm"}
+
+But I'm not sure if I want one specific partner. #{"name": "Juptier", "mood":"smile"}
+
+I'm at a place in my life where I want to mingle. Explore the possibilities. #{"name": "Juptier", "mood":"smile"}
+
+I'm absolutely here for close loving friendships, relationships even. But I don't want to prioritise one relationship above all others. #{"name": "Juptier", "mood":"smile"}
+
+Once I get to like someone I'm there for them for life. But monogamous coupling isn't necessarily part of the deal. #{"name": "Juptier", "mood":"smile"}
+
+I hope that's not a dealbraker for you. #{"name": "Juptier", "mood":"1palm"}
+
+* [That's not a problem.] -> j10_link
+* [Sorry. That's not what I'm looking for.] -> j_end_2
+
+=== j10_link
+
+Awesome. I'm super glad. #{"name": "Juptier", "mood":"grin"}
+
+There's something about you Moon. You have a real shine. I wouldn't want to miss the chance to get to know you better. #{"name": "Juptier", "mood":"1palm"}
+
+So, now that's out of the way... #{"name": "Juptier", "mood":"1palm"}
+
+-> j_nexus_2
+
+
 
 // we all need someone, right? Confession: I'm not really here to find a partner. Like,not specifically. Why knows what might come in time, but it's not her primary aim. I'm kind of a social butterfly. I don't wanna be pinned down. But I absolutely love people, and you seem like a good one. Ypou have a real shine, you know that? So yeah. I guess that's a disclosure. Once I get to like someone I'm there for them for life. But... monogamous romance isn't necessarily part of the deal. Is that okay? 
 
@@ -261,6 +296,9 @@ If you want to meet people then I'm the Celestial to talk to.  #{"name": "Juptie
 TODO: More about their parties, or on to the J_nexus_2?
 
 
+TODO: Neatly link this to nexus_2
+
+
 === J12
 Deep, deep! #{"name": "Juptier", "mood":"grin"}
 
@@ -282,6 +320,9 @@ Some people like it. Some people don't. #{"name": "Juptier", "mood":"1palm"}
 
 I do. I'm glad you do too. #{"name": "Juptier", "mood":"bigsmile"}
 
+
+TODO: Neatly link this to nexus_2
+
 -> j_nexus_2
 
 
@@ -300,12 +341,16 @@ But I think life's too short - or maybe too long - to just stick with the status
 
 There're too many amazing experiences out there. Too many people to meet, places to go, things to do.  #{"name": "Juptier", "mood":"smile"}
 
-You gotta shake it up now and then, or who knows what you'll miss? #{"name": "Juptier", "mood":"1palm"}
+You gotta shake it up now and then or who knows what you'll miss? #{"name": "Juptier", "mood":"1palm"}
+
+TODO: Neatly link this to nexus_2
 
 -> j_nexus_2
 
 
 === j_nexus_2
+
+What should we talk about? 
 
 TODO: Nexus to Jupiter talking about what she wants and what she offers.
 
@@ -313,7 +358,7 @@ TODO: Nexus to Jupiter talking about what she wants and what she offers.
 
 TODO: Apply answers to this and continue from this nexus.
 
-//// ENDINGS ///
+/// ENDINGS ///
 
 === j_end_1
 
@@ -325,7 +370,24 @@ Sayonara Moon. You take care. #{"name": "Juptier", "mood":"smile"}
 
 Jupiter left. 
 
+TODO: Link to Fenrir segue.
+
+=== j_end_2
+
+I understand. No problem whatsoever. #{"name": "Juptier", "mood":"smile"}
+
+Maybe we'll meet again sometime. I sure hope so. I think we could be good friends, you know? #{"name": "Juptier", "mood":"smile"}
+
+It was nice meeting you. You've got a real gleam, you know that? #{"name": "Juptier", "mood":"wink"}
+
+Au revoir Moon. Good luck finding that special someone. #{"name": "Juptier", "mood":"smile"}
+
+Jupiter left. 
+
 TODO: Link to a Fenrir ending segue.
+
+
+/// FENRIR SEGUES ///
 
 
 
