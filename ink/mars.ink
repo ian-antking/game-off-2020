@@ -41,7 +41,7 @@ Heh, hello!   #{"name": "Mars", "mood": "pleased" }
 
 === mars_3 ===
 
-I'm... okay, I guess. I've never done one of these before... #{"name": "Mars", "mood": "submissive”}
+I'm... okay, I guess. I've never done one of these before... #{"name": "Mars", "mood": "submissive"}
 
 *   [I can tell.] -> mars_5
 *   [Me neither.] -> mars_6
@@ -179,7 +179,7 @@ tales of the underdog rising up against an oppressor, tales of the rise and fall
 
 Like, each of my swords are replicas from specific epics, periods and heroes. #{"name": "Mars", "mood": "pleased"}
 
-I have replica samurai swords, this huge claymore that weighs 10 kilos, Gabriel's daggers from Street Spirits... #{"name": "Mars", "mood": smile"}
+I have replica samurai swords, this huge claymore that weighs 10 kilos, Gabriel's daggers from Street Spirits... #{"name": "Mars", "mood": "smile"}
 
 * [Wait, what was that last one?] -> cartoons_segue_1
 * [(Nod and smile)] -> swords_6
