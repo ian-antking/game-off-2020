@@ -9,8 +9,9 @@ export default class DialogueScene extends Phaser.Scene {
     super('Dialogue');
   }
 
-  init() {
+  init({ characterData }) {
     this.gameScene = this.scene.get('Game');
+    this.characters = characterData || characters;
   }
 
   create() {
@@ -28,7 +29,7 @@ export default class DialogueScene extends Phaser.Scene {
 
     this.characterManager = new CharacterManager({
       scene: this,
-      characters: characters,
+      characters: this.characters,
     });
   }
 

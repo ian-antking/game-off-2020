@@ -21,7 +21,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.scene.launch('Splash');
-    this.scene.launch('Dialogue');
+    this.scene.launch('Dialogue', { characterData: this.saveData.characters });
     this.scene.launch('UI');
   }
 

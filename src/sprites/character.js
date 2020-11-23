@@ -1,11 +1,11 @@
 import Phaser from 'phaser';
 
 export default class Character extends Phaser.GameObjects.Sprite {
-  constructor({ name, scene, x, y }) {
+  constructor({ name, scene, x, y, affinity }) {
     super(scene, x, y, `${name.toLowerCase()}-neutral`);
     this.scene = scene;
     this.name = name;
-    this.affinity = 0;
+    this.affinity = affinity || 0;
     this.setScale(0.5);
     this.scene.add.existing(this);
     this.alpha = 0;
