@@ -43,8 +43,7 @@ export default class TitleScene extends Phaser.Scene {
 
     this.logo = this.add.image(0, 0, 'logo');
     Align.center(this.logo, this);
-    this.logo.y -= 50;
-    this.logo.setScale(0.75);
+    this.logo.setScale(0.3);
 
     this.newGameText = this.make.text({
       text: 'New Game',
