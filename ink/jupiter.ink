@@ -261,17 +261,14 @@ I hope that's not a dealbraker for you. #{"name": "Juptier", "mood":"1palm"}
 
 Awesome. I'm super glad. #{"name": "Juptier", "mood":"grin"}
 
-There's something about you Moon. You have a real shine. I wouldn't want to miss the chance to get to know you better. #{"name": "Juptier", "mood":"1palm"}
+There's something about you Moon. You have a real shine. I wouldn't want to miss the chance to get to know you better. #{"name": "Juptier", "mood":"pistolfinger"}
 
-So, now that's out of the way... #{"name": "Juptier", "mood":"1palm"}
+So, now that's out of the way... #{"name": "Juptier", "mood":"smile"}
+
+What would you like to talk about?  #{"name": "Juptier", "mood":"1palm"}
 
 -> j_nexus_2
 
-
-
-// we all need someone, right? Confession: I'm not really here to find a partner. Like,not specifically. Why knows what might come in time, but it's not her primary aim. I'm kind of a social butterfly. I don't wanna be pinned down. But I absolutely love people, and you seem like a good one. Ypou have a real shine, you know that? So yeah. I guess that's a disclosure. Once I get to like someone I'm there for them for life. But... monogamous romance isn't necessarily part of the deal. Is that okay? 
-
-// Leads to a choice. Yes -> nexus 2, no -> an ending sequence.
 
 === J11
 
@@ -291,12 +288,15 @@ Yeah, I'm a social stewpot. I like to bring lots of people together, mix 'em up 
 
 Okay, it's a bad analogy. But yeah. If there's one thing I love it's bringing people together.  #{"name": "Juptier", "mood":"1palm"}
 
-If you want to meet people then I'm the Celestial to talk to.  #{"name": "Juptier", "mood":"pistolfinger"}
+Dinner parties, art parties, themed parties, regular parties... I am all about parties. #{"name": "Juptier", "mood":"smile"}
 
-TODO: More about their parties, or on to the J_nexus_2?
+And if you want to meet new people then I'm the Celestial to talk to.  #{"name": "Juptier", "mood":"pistolfinger"}
 
+Mind you, I like one-on-one time too. It's hard to really get to know someone without a lil' personal time, know what I mean?  #{"name": "Juptier", "mood":"1palm"}
 
-TODO: Neatly link this to nexus_2
+Oh man, I'm sorry. This is a date night right? We shpould be talking about each other, not the humdrum.  What would you like to talk about? #{"name": "Juptier", "mood":"1palm"}
+
+-> j_nexus_2
 
 
 === J12
@@ -320,8 +320,7 @@ Some people like it. Some people don't. #{"name": "Juptier", "mood":"1palm"}
 
 I do. I'm glad you do too. #{"name": "Juptier", "mood":"bigsmile"}
 
-
-TODO: Neatly link this to nexus_2
+So, how about we explore each other a little? You got any questions about me?  #{"name": "Juptier", "mood":"1palm"}
 
 -> j_nexus_2
 
@@ -343,18 +342,25 @@ There're too many amazing experiences out there. Too many people to meet, places
 
 You gotta shake it up now and then or who knows what you'll miss? #{"name": "Juptier", "mood":"1palm"}
 
-TODO: Neatly link this to nexus_2
+Meeting new people gives you new ideas. It brings new opportunities. #{"name": "Juptier", "mood":"smile"}
+
+It's inspiring. And it often leads to adventure. #{"name": "Juptier", "mood":"bigsmile"}
+
+Maybe we should talk about things we like to do. Identify some common ground, maybe even make some plans if you like. #{"name": "Juptier", "mood":"1palm"}
+
+
+But it's up to you. What would you like to talk about?  #{"name": "Juptier", "mood":"1palm"}
+
 
 -> j_nexus_2
 
-
 === j_nexus_2
 
-What should we talk about? 
+
+
+* [
 
 TODO: Nexus to Jupiter talking about what she wants and what she offers.
-
-
 
 TODO: Apply answers to this and continue from this nexus.
 
