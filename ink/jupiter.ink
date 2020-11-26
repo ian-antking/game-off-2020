@@ -45,7 +45,7 @@ That's good to hear. #{"name": "Juptier", "mood":"smile"}
 
 
 === j4
-Oh, sweetie!  #{"name": "Juptier", "mood":"bigsmile"} //bigsmile: friendly laugh
+Oh, sweetie!  #{"name": "Juptier", "mood":"bigsmile"}
 Oh, well, that's okay. #{"name": "Juptier", "mood":"smile"}
 How about we don't date? #{"name": "Juptier", "mood":"smile"}
 How about we just chill, hey? #{"name": "Juptier", "mood":"smile"}
@@ -127,7 +127,7 @@ Jupiter went to the bar.
 
 She's chatting with people while she waits to be served. She seems to know a lot of celestials.
 
-Ta-da! #{"name": "Juptier", "mood":"grin"} /// grin: normal grin, no blush, eyes closed.
+Ta-da! #{"name": "Juptier", "mood":"grin"}
 
 This is Fenrir's Watermelon Cooler. #{"name": "Juptier", "mood":"grin"}
 
@@ -151,7 +151,7 @@ Jupiter went to the bar.
 
 She's chatting with people while she waits to be served. She seems to know a lot of celestials.
 
-Here we are! #{"name": "Juptier", "mood":"smile"} /// grin: normal grin, no blush, eyes closed.
+Here we are! #{"name": "Juptier", "mood":"smile"}
 
 This is Fenrir's Spicy Chai Latte.  #{"name": "Juptier", "mood":"smile"}
 
@@ -175,7 +175,7 @@ Jupiter went to the bar.
 
 She's chatting with people while she waits to be served. She seems to know a lot of celestials.
 
-Here ya go! #{"name": "Juptier", "mood":"grin"} /// grin: normal grin, no blush, eyes closed.
+Here ya go! #{"name": "Juptier", "mood":"grin"}
 
 This is Fenrir's London Fog. #{"name": "Juptier", "mood":"grin"}
 
@@ -207,7 +207,7 @@ Okay. That's what we'll do.  #{"name": "Juptier", "mood":"smile"}
 
 === j7b
 
-Darn. You got me. #{"name": "Juptier", "mood":"pistolfinger"} //pistolfinger: pistolfinger, wink, side grin. 
+Darn. You got me. #{"name": "Juptier", "mood":"pistolfinger"}
 
 -> j7
 
@@ -356,9 +356,15 @@ But it's up to you. What would you like to talk about?  #{"name": "Juptier", "mo
 
 === j_nexus_2
 
-* [So you're a socialite?] // We've planned this route.
-* [What do you do apart from meeting people?] // Socialising ovbs, but I have other hobbies too. Although I usually do them with other people! cooking, art
+* [So you're a socialite?] -> j14
+* [What do you do apart from meeting people?] -> j18  
+TODO: Finish this one.
 * [What would spending time with you be like?] // Brief. How she'd treat you as an individual.
+TODO: Write this one.
+* {j_nexus_2} [Can I seee you again?]
+TODO: Write this one.
+* {j_nexus_2} [Can you give me the attention I need?]
+TODO: Write this one.
 
 // After one other option has been chosen: 
 // * [Would you like to meet again?] Leads to options about what the next date would be, or possibly just descriptions, then a successful ending.
@@ -366,9 +372,190 @@ But it's up to you. What would you like to talk about?  #{"name": "Juptier", "mo
 
 // And that's a full script! :3
 
-TODO: Nexus to Jupiter talking about what she wants and what she offers.
+=== j14
 
-TODO: Apply answers to this and continue from this nexus.
+Heh, yeah, I guess. Kinda. #{"name": "Juptier", "mood":"grin"}
+
+Like, I'm not a big celebrity or anything like that. #{"name": "Juptier", "mood":"1palm"}
+
+But it is hard for me to go places without bumping into someone I know. #{"name": "Juptier", "mood":"1palm"}
+
+-> social_nexus
+
+=== social_nexus
+
+* [Were you always this social?] -> j15
+* [How do you meet so many people?] -> j16
+* [How do you find the confidence to talk to people?] -> j17
+
+=== j15
+
+Nah, not really. I used to be pretty antisocial. #{"name": "Juptier", "mood":"smile"}
+
+Like, I don't say that as a negative. I really enjoy my own company. In fact I think being happy in yourself is a really important part of being social. #{"name": "Juptier", "mood":""1palm"}
+
+I guess... I guess that for a long time I thought that people were a lot of effort. I found socialising really hard. #{"name": "Juptier", "mood":"thinking"}
+
+It took me a while to realise that getting to know people is a slow, incremental process. #{"name": "Juptier", "mood":"1palm"}
+
+It also took me a while to realise that it's pretty easy when you know how! #{"name": "Juptier", "mood":"grin"}
+
+The key thing is that most people really like to be heard and understood. They want to share what's important to them. They want to have their passions acknowledged. #{"name": "Juptier", "mood":"1palm"}
+
+Most people will open right up to you If you're friendly and sincere and you let them tell you about themselves. #{"name": "Juptier", "mood":"smile"}
+
+A smile and a shoulder go a really long way. #{"name": "Juptier", "mood":"gentlewink"}
+
+And you know what? Once you get over the fear of opening up to people it becomes an absolute pleasure to do. #{"name": "Juptier", "mood":"smile"}
+
+That's where the bit about loving yourself comes in. You've gotta have yourself to fall back on, you know? If you do, nothing's too scary anymore. #{"name": "Juptier", "mood":"1palm"}
+
+Heh, sorry. I got a bit carried away there! #{"name": "Juptier", "mood":"grin"}
+
+You got any more questions sweetie? #{"name": "Juptier", "mood":"smile"}
+
+-> j_nexus_2
+
+=== j16
+
+I hold a lot of parties. Big ones! #{"name": "Juptier", "mood":"bigsmile"}
+
+I encourage people to bring their pals along, and when I see a new face with someone I know I make sure to say hey and introduce myself, take an interest. #{"name": "Juptier", "mood":"1palm"}
+
+And I try my best never to turn down an invitation. Especially to small or one-on-one things. #{"name": "Juptier", "mood":"1palm"}
+
+Like, mixing with big crowds feels swell, but I don't think being known by people is worth much if you don't really -know- those people, know what I mean? #{"name": "Juptier", "mood":"gentlewink"}
+
+And I find it way nicer to connect with people when i can give them some proper time, you know? Go for a stroll, catch a show, grab an ice cream or something. #{"name": "Juptier", "mood":"smile"}
+
+I need an emotional connection. Being able to share this experience is one of the most amazing gifts in the universe. #{"name": "Juptier", "mood":"smile"}
+
+That's the crux of it. Dive into the crowd, but also make quality time for people when they need it. #{"name": "Juptier", "mood":"1palm"}
+
+Anything else you wanna talk about? #{"name": "Juptier", "mood":"smile"}
+
+-> j_nexus_2
+
+
+=== j17
+
+It comes from the heart sweetie. #{"name": "Juptier", "mood":"wink"}
+
+Sorry, that was tacky! #{"name": "Juptier", "mood":"grin"}
+
+I mean it though. There are a couple of secrets to it. #{"name": "Juptier", "mood":"1palm"}
+
+First off, most people are ultra eager to talk if they know they won't be judged or criticised. #{"name": "Juptier", "mood":"1palm"} 
+
+People love sharing their passions when they know they'll be appreciated. #{"name": "Juptier", "mood":"smile"} 
+
+So be kind, be gentle, be sincere, be supportive and be interested. #{"name": "Juptier", "mood":"smile"} 
+
+Do that and you'll make friends fast. #{"name": "Juptier", "mood":"gentlewink"} 
+
+Secondly, you need to love yourself. Reason is, sometimes trying to make new pals doesn't go great and you need to be able to deal with that. #{"name": "Juptier", "mood":"smile"} 
+
+Most people are good, but it only takes a few harsh words to sow the seeds of self-doubt. #{"name": "Juptier", "mood":"1palm"} 
+
+It's important to introspect, to critique yourself and try and improve yourself. But it's even more important to be able to love yourself while doing that. #{"name": "Juptier", "mood":"smile"} 
+
+Fundamentally all ideals are arbitrary, there is no such thing as absolute value and you are just as incredible and perfect a person as anyone else out there and you should never forget it. #{"name": "Juptier", "mood":"thinking"} 
+
+If you can make a big kernel of self-love in your heart, nourish it, help it thrive... #{"name": "Juptier", "mood":"1palm"} 
+
+then tealking to people becomes way easy, because even if some people knock you back or make you feel small... #{"name": "Juptier", "mood":"1palm"} 
+
+You still have yourself. And you're still perfect, and you still know and feel that -so- deeply. #{"name": "Juptier", "mood":"pistolfinger"}
+
+Tl;dr: Be kind to others, take an interest, don't be judgemental and be good to yourself. Do those things and talking to people becomes way easy. It all comes form the heart. #{"name": "Juptier", "mood":"wink"} 
+
+So, what else do you wanna chat about? #{"name": "Juptier", "mood":"1palm"} 
+
+-> j_nexus_2
+
+
+=== j18
+
+I guess I spend most of my time mixing with people. But there are a lot of ways to do that! #{"name": "Juptier", "mood":"grin"} 
+
+I like to cook big meals for people. Huge dinner parties. #{"name": "Juptier", "mood":"1palm"} 
+
+I like painting too. Sometimes I arrange finger painting sessions with pals. The messier the better! #{"name": "Juptier", "mood":"grin"} 
+
+I like trecking too. Nothing like a big adventure with a close pal or two to build meaningful bonds. #{"name": "Juptier", "mood":"smile"} 
+
+-> hobby_nexus
+
+=== hobby_nexus
+
+* [Tell me about your dinner parties.] -> j19
+* [Tell me about your art parties.] -> j20
+* [Tell me about trecking.] -> j21
+* {hobby_nexus} [Let's talk about something else.] -> j_nexus_2
+
+=== j19
+
+Oh man, well, I love to cook. And I'm pretty darn good at it. #{"name": "Juptier", "mood":"smile"} 
+
+I love to make good food for myself, but it feels kinda, I dunno... #{"name": "Juptier", "mood":"thinking"} 
+
+It feels like if I'm making all this tasty stuff, why am I not sharing it? #{"name": "Juptier", "mood":"1palm"} 
+
+Cooking for people and eating with people is so much better than doing it alone. I think so anyway. #{"name": "Juptier", "mood":"smile"} 
+
+Like, I love seeing people's eyes widen when they see a big hot plate of chicken katsu curry... #{"name": "Juptier", "mood":"smile"} 
+
+The huge grins conjoured by a big salted caramel mud cake... #{"name": "Juptier", "mood":"1palm"} 
+
+The shear extacy of a pal who just took a bite of white chocolate tiramasu with raspberry sauce... The huge grins conjoured by a big salted caramel mud cake... #{"name": "Juptier", "mood":"grin"} 
+
+Seeing their jaws drop when I bring out a huge sunday roast with all the trimmings and the plates of food just keep coming... #{"name": "Juptier", "mood":"bigsmile"}
+
+It. Is. The. BEST. #{"name": "Juptier", "mood":"smile"}
+
+And it means I can bake cakes without having to eat the whole thing myself. #{"name": "Juptier", "mood":"1palm"}
+
+Maybe I can cook for you sometime. #{"name": "Juptier", "mood":"wink"}
+
+Wanna talk about anything else? #{"name": "Juptier", "mood":"smile"}
+
+-> hobby_nexus
+
+=== j20
+
+Oh man, art parties are great. I've arranged a bunch of 'em.
+
+Sometimes we'll have a theme. Like, Bob Ross parties always go down super well.
+
+I think my favourite ones are the finger painting parties.
+
+What we do is, we get a big space and line all the walls with paper
+
+We put on old clothes...
+
+Get big bowls of paint, glitter, confetti, whatever we're feeling...
+
+And just heckin' go at it!
+
+It's really, like, I dunno... Organic? Intuitive? Expressive?
+
+It's a fun way to paint, anyway.
+
+And it's a great way to mesh with people who aren't so great at smalltalk.
+
+I'm not a skilled artist or anything like that, but I get a real buzz out of it.
+
+// Say, wanna see some of my works?
+
+// *[Sure.] -> 3 arts.
+// *[Another time.] _ Back to nexus
+// *[Nah.] -> Back to nexus.
+
+Anything else you wanna know? -> hobby_nexus
+
+=== j21
+
+TODO: Trecking
 
 /// ENDINGS ///
 
