@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import Align from '../utils/align';
 import SaveManager from '../utils/save-manager';
-
+import MusicButton from '../sprites/music-button';
 export default class TitleScene extends Phaser.Scene {
   constructor() {
     super('Title');
@@ -85,6 +85,11 @@ export default class TitleScene extends Phaser.Scene {
 
       Align.center(this.continueText, this);
       this.continueText.y += 150;
+
+      this.musicButton = new MusicButton({
+        scene: this
+      });
+  
     }
   }
 
