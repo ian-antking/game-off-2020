@@ -356,9 +356,15 @@ But it's up to you. What would you like to talk about?  #{"name": "Juptier", "mo
 
 === j_nexus_2
 
+* [So you're a socialite?] // We've planned this route.
+* [What do you do apart from meeting people?] // Socialising ovbs, but I have other hobbies too. Although I usually do them with other people! cooking, art
+* [What would spending time with you be like?] // Brief. How she'd treat you as an individual.
 
+// After one other option has been chosen: 
+// * [Would you like to meet again?] Leads to options about what the next date would be, or possibly just descriptions, then a successful ending.
+// * [Can you give me the attention I need?] That depends on you. What do you want? Can you accept my divided attention? Because if we hit it off, even when my attention's with other people I'm there if you need me. Is that enough? Yes: Successful ending. No: Unsuccessful ending.
 
-* [
+// And that's a full script! :3
 
 TODO: Nexus to Jupiter talking about what she wants and what she offers.
 
