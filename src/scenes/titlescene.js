@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import Align from '../utils/align';
 import SaveManager from '../utils/save-manager';
-
+import MusicButton from '../sprites/music-button';
 export default class TitleScene extends Phaser.Scene {
   constructor() {
     super('Title');
@@ -12,6 +12,9 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
+    this.music = this.sound.add('title-music');
+    this.music.play();
+
     this.background = this.add.tileSprite(
       this.scale.width/2,
       this.scale.height/2,
@@ -82,6 +85,11 @@ export default class TitleScene extends Phaser.Scene {
 
       Align.center(this.continueText, this);
       this.continueText.y += 150;
+
+      this.musicButton = new MusicButton({
+        scene: this
+      });
+  
     }
   }
 
@@ -94,6 +102,7 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   startGame(saveGame) {
+    this.music.stop();
     this.scene.start('Game', saveGame || null);
   }
 }
