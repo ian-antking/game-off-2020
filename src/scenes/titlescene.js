@@ -12,6 +12,9 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
+    this.music = this.sound.add('title-music');
+    this.music.play();
+
     this.background = this.add.tileSprite(
       this.scale.width/2,
       this.scale.height/2,
@@ -94,6 +97,7 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   startGame(saveGame) {
+    this.music.stop();
     this.scene.start('Game', saveGame || null);
   }
 }

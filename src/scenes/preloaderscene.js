@@ -100,6 +100,9 @@ export default class PreloaderScene extends Phaser.Scene {
     //characters
     characters.forEach((character) => this.loadCharacterData(character));
 
+    //music
+    this.load.audio('title-music', 'assets/music/A-Walk-Through-the-City_Looping.mp3');
+
     this.load.addFile(new WebFontFile(this.load, ['Press Start 2P', 'Play']));
   }
 
