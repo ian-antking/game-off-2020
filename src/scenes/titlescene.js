@@ -13,6 +13,7 @@ export default class TitleScene extends Phaser.Scene {
 
   create() {
     this.music = this.sound.add('title-music');
+    this.music.setLoop(true);
     this.music.play();
 
     this.background = this.add.tileSprite(
@@ -102,7 +103,14 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   startGame(saveGame) {
-    this.music.stop();
-    this.scene.start('Game', saveGame || null);
+    this.startGameTween = this.tweens.add({
+      targets:  this.music,
+      volume:   0,
+      duration: 500,
+      onComplete: () => {
+        this.music.stop();
+        this.scene.start('Game', saveGame || null);
+      }
+    });
   }
 }

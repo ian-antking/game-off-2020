@@ -104,6 +104,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     //music
     this.load.audio('title-music', 'assets/music/A-Walk-Through-the-City_Looping.mp3');
+    this.load.audio('opening-music', 'assets/music/Autumn-Changes_Looping.mp3');
 
     this.load.addFile(new WebFontFile(this.load, ['Press Start 2P', 'Play']));
   }
