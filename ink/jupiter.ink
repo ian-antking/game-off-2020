@@ -357,9 +357,8 @@ But it's up to you. What would you like to talk about?  #{"name": "Juptier", "mo
 === j_nexus_2
 
 * [So you're a socialite?] -> j14
-* [What do you do apart from meeting people?] -> j18  
-TODO: Finish this one.
-* [What would spending time with you be like?] // Brief. How she'd treat you as an individual.
+* [What do you do apart from meeting people?] -> j18
+* [What would spending time with you be like?] -> j22 // Brief. How she'd treat you as an individual.
 TODO: Write this one.
 * {j_nexus_2} [Can I seee you again?]
 TODO: Write this one.
@@ -497,23 +496,24 @@ I like trecking too. Nothing like a big adventure with a close pal or two to bui
 
 Oh man, well, I love to cook. And I'm pretty darn good at it. #{"name": "Juptier", "mood":"smile"} 
 
-I love to make good food for myself, but it feels kinda, I dunno... #{"name": "Juptier", "mood":"thinking"} 
+I like to make good food just for myself, but it feels kinda, I dunno... #{"name": "Juptier", "mood":"thinking"} 
 
 It feels like if I'm making all this tasty stuff, why am I not sharing it? #{"name": "Juptier", "mood":"1palm"} 
 
-Cooking for people and eating with people is so much better than doing it alone. I think so anyway. #{"name": "Juptier", "mood":"smile"} 
+Cooking for people and eating with people is so much better than doing it alone. #{"name": "Juptier", "mood":"smile"} 
 
-Like, I love seeing people's eyes widen when they see a big hot plate of chicken katsu curry... #{"name": "Juptier", "mood":"smile"} 
+Like, I love seeing people's eyes widen when they see a big hot plate of my chicken katsu curry... #{"name": "Juptier", "mood":"smile"} 
 
-The huge grins conjoured by a big salted caramel mud cake... #{"name": "Juptier", "mood":"1palm"} 
+The huge grins conjoured by a salted caramel mud cake... #{"name": "Juptier", "mood":"1palm"} 
 
-The shear extacy of a pal who just took a bite of white chocolate tiramasu with raspberry sauce... The huge grins conjoured by a big salted caramel mud cake... #{"name": "Juptier", "mood":"grin"} 
+Seeing jaws drop when I bring out a huge sunday roast with all the trimmings and the plates of food just keep coming... #{"name": "Juptier", "mood":"bigsmile"}
 
-Seeing their jaws drop when I bring out a huge sunday roast with all the trimmings and the plates of food just keep coming... #{"name": "Juptier", "mood":"bigsmile"}
+
+Or the extatic expression of someone who just took a bite of my white chocolate matcha tiramasu... #{"name": "Juptier", "mood":"grin"} 
 
 It. Is. The. BEST. #{"name": "Juptier", "mood":"smile"}
 
-And it means I can bake cakes without having to eat the whole thing myself. #{"name": "Juptier", "mood":"1palm"}
+And it means I can make loads of desserts without having to eat 'em all. I can only take so much sugar. #{"name": "Juptier", "mood":"1palm"}
 
 Maybe I can cook for you sometime. #{"name": "Juptier", "mood":"wink"}
 
@@ -555,7 +555,64 @@ Anything else you wanna know? -> hobby_nexus
 
 === j21
 
-TODO: Trecking
+By now it should be pretty clear that I love doing stuff with other people.
+
+But sometimes the stuff you're doing kinda gets in the way of getting to know the people. 
+
+Activities can be distracting.,especially if there are lots of people involved.
+
+And although I love mixing with people I do need a break now and then.
+
+Now trecking is a whole different thing. 
+
+A good trek takes hours. It's pretty physically demanding, but apart from that it's not too mentally distracting.
+
+In fact it's really chill. Being out in nature has a unique effect on the mind, you know?
+
+The exertion, the breeze, the sun, the scenery...
+
+The rustle of the trees, the trickle of streams and rivers...
+
+It softens your mood and sharpens your mind.
+
+And it's the ideal way to get to know someone better.
+
+When you go trecking with someone all you have to do is walk and talk to each other.
+
+You aren't competing with people for attention. You aren't distracted by stuff around you, not as much as in other settings anyway.
+
+You can take your time, chew the fat, think about stuff, bounce ideas of each other. Really connect, with them and with yourself.
+
+It's -so- good for the soul. If you've never trecked you shoudl totally give it a go.
+
+In fact I'd love to take you sometime, if it sounds like your kinda thing.
+
+Wanna talk about something else? -> hobby_nexus
+
+
+=== j22
+
+// Well, I do my best to be sincere, kind and honest. 
+//So if you want to get to know me more I promise I'll do my best to be decent and straight with you.
+// And in the spirit of honesty and respect I'll go right ahead and say that I'm not really looking for, like, a closely co-dependant relationship thing.
+// I love people. I have a lot of people I care about and like to spend time with.
+// If that would make you jealous then I may not be the best pick for you.
+// Maybe in time I'll be willing to calm down a bit, once I know you. But I can't guarantee that. I need my freedom.
+
+// Now, on to brighter things!
+// As a pal of mine you get access to a number of exciting benefits!
+// Number one: As an introductory gift I will bestow upon you one of my excellent banoffee pies. The only condition is that I get to come round and eat it with you.
+// Number two: As a premium member of my personal life you'll get access to exclusive parties. You'll get to mingle with my favourite people. BYOB, but if you can't there's plenty to share.
+// Number three: As a mamber of the Jupiter Palship Premium Plan I guarantee that if you ever need me I'll be there. 
+// I may not always be around for day to day stuff. I'm a busy celestial. But if you are ever in need I will drop everything and turn up at your doorstep with emergency chocolate and puppies.
+
+// How does that sound?
+
+// [Pretty good.] -> j23 (this one will be a hooray linking back to hobbies.)
+// [Not for me.] -> j24 (this one will be a okay. Woudl you like to keep talking? y: 25, loop back to nexus, or J_end_x: date over.)
+
+// That's largely up to you. // There are so many experiences out there. ///
+
 
 /// ENDINGS ///
 
